@@ -26,17 +26,30 @@ Check out Videos from our channel under this playlist on YouTube. Please follow 
 
 ### Low-Code Customize & Extend
 
+### Full-Stack
+
+#### Flutter and GraphQL Low-Code Customize For Beginners
+
+  - Use database generated key values upon insert
+  - Use Views based on 2 tables intro
+  - Handling Views based on 2 tables in Display
+  - Handling Views based on 2 tables in Input/Edit Saving
+
 ### Frontend
 
 #### Flutter Low-Code Customize For Beginners
 
-  - Add Dropdown
   - Hide Fields and Columns
+  - Add Dropdown (e.g. foreign key - value)
   - Link Master - Detail Table Screens
   - Refine SideNav (Navbar)
+  - Enable Media Players, Uploading
+  - Enable Launch URLs
+  - Build real data Graph from template code
   - Use GraphQL Subscriptions
+  - Add/Modify/Remove Table Columns, Regenerate code, Sync
   - Add/Remove Screens and Widgets
-  - Understand and switch between EasyManage APIs GraphQL and REST
+  - Understand and switch between APIs calling to GraphQL or REST
 
 #### Flutter Low-Code Customize For Advanced
 
@@ -47,7 +60,7 @@ Check out Videos from our channel under this playlist on YouTube. Please follow 
   - Add your own non-EasyManage APIs
   - Setting up Security Authentication Sign-Up Sign-In
   - Setup Splash Screen
-  - Setting up APIs for production
+  - Setting up API calling for production
 
 <!--
 #### Flutter Customize Example Use Case
