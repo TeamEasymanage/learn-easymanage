@@ -1,12 +1,10 @@
 # Learn EasyManage
 
-Demo apps, tutorials for frontend and backend developers. The examples referred in Videos from our channel [YouTube - EasyManage](https://www.youtube.com/@TeamEasyManage)
+Tutorials and sample projects for full-stack, frontend and backend developers. These are examples referred in Videos from our YouTube channel [YouTube - EasyManage](https://www.youtube.com/@TeamEasyManage). Please follow relevant documentation pages along with videos, from [EasyManage Docs](https://easymanage.com/res/docs/intro/).
 
-## What you will learn
+## Tutorials
 
-Tutorials for developers.
-
-There are different tutorial series:
+Please find below, information on what you will learn from Tutorials for developers. There are different tutorial series:
 
 ### Build With EasyManage
 
