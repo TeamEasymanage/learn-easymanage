@@ -24,6 +24,10 @@ Please find below, information on what you will learn from Tutorials for develop
 
 Check out Videos from our channel under this playlist on YouTube. Please follow the tutorial for *Build With EasyManage*.
 
+----------------------------------------------------------------
+Below Videos and Tutorials are Coming Soon!
+----------------------------------------------------------------
+
 ### Low-Code Customize & Extend
 
 ### Full-Stack
