@@ -1,0 +1,93 @@
+ 
+<form [formGroup]="ErpProductForm_5003456_CForm" novalidate (ngSubmit)="onSubmit()"> 
+  <mat-card class="shipping-card"> 
+    <mat-card-header> 
+      <mat-card-title>ErpProduct</mat-card-title> 
+    </mat-card-header> 
+    <mat-card-content> 
+      <div class="row"> 
+        <div class="col"> 
+          <mat-form-field class="full-width">  <!-- width % can change in CSS --> 
+				<!-- productId : Java Type long : Json Type number  : EM Type NUMBER  --> 
+            <!-- size|maxlength="10" Display Size="10" --> 
+            <input matInput placeholder="productId" formControlName="productId"> 
+            <!-- <mat-error *ngIf="addressForm.controls['address'].hasError('required')"> 
+              Address is <strong>required</strong> 
+            </mat-error> --> 
+			 <mat-hint>Numeric</mat-hint> 
+          </mat-form-field> 
+        </div> 
+      </div> 
+      <div class="row"> 
+        <div class="col"> 
+          <mat-form-field class="full-width">  <!-- width % can change in CSS --> 
+				<!-- productName : Java Type String : Json Type string  : EM Type CHAR  --> 
+            <!-- size|maxlength="50" Display Size="20" --> 
+            <input matInput placeholder="productName" formControlName="productName"> 
+            <!-- <mat-error *ngIf="addressForm.controls['address'].hasError('required')"> 
+              Address is <strong>required</strong> 
+            </mat-error> --> 
+			 <!-- <mat-hint>CHAR</mat-hint> --> 
+          </mat-form-field> 
+        </div> 
+      </div> 
+      <div class="row"> 
+        <div class="col"> 
+          <mat-form-field class="full-width">  <!-- width % can change in CSS --> 
+				<!-- productCategory : Java Type String : Json Type string  : EM Type CHAR  --> 
+            <!-- size|maxlength="20" Display Size="20" --> 
+            <input matInput placeholder="productCategory" formControlName="productCategory"> 
+            <!-- <mat-error *ngIf="addressForm.controls['address'].hasError('required')"> 
+              Address is <strong>required</strong> 
+            </mat-error> --> 
+			 <!-- <mat-hint>CHAR</mat-hint> --> 
+          </mat-form-field> 
+        </div> 
+      </div> 
+      <div class="row"> 
+        <div class="col"> 
+          <mat-form-field class="full-width">  <!-- width % can change in CSS --> 
+				<!-- primarySupplier : Java Type String : Json Type string  : EM Type CHAR  --> 
+            <!-- size|maxlength="30" Display Size="20" --> 
+            <input matInput placeholder="primarySupplier" formControlName="primarySupplier"> 
+            <!-- <mat-error *ngIf="addressForm.controls['address'].hasError('required')"> 
+              Address is <strong>required</strong> 
+            </mat-error> --> 
+			 <!-- <mat-hint>CHAR</mat-hint> --> 
+          </mat-form-field> 
+        </div> 
+      </div> 
+      <div class="row"> 
+        <div class="col"> 
+          <mat-form-field class="full-width">  <!-- width % can change in CSS --> 
+				<!-- productDesc : Java Type String : Json Type string  : EM Type TEXT  --> 
+            <!-- rows="3" cols="50" wrap="soft" --> 
+            <textarea matInput placeholder="productDesc" formControlName="productDesc"></textarea> 
+            <!-- <mat-error *ngIf="addressForm.controls['address'].hasError('required')"> 
+              Address is <strong>required</strong> 
+            </mat-error> --> 
+			 <mat-hint>Text</mat-hint> 
+          </mat-form-field> 
+        </div> 
+      </div> 
+      <div class="row"> 
+        <div class="col"> 
+          <mat-form-field class="full-width">  <!-- width % can change in CSS --> 
+				<!-- productPicture : Java Type byte[] : Json Type string  : EM Type STREAM  --> 
+            <!-- size|maxlength="3" Display Size="50" --> 
+            <input matInput placeholder="productPicture" formControlName="productPicture"> 
+            <!-- <mat-error *ngIf="addressForm.controls['address'].hasError('required')"> 
+              Address is <strong>required</strong> 
+            </mat-error> --> 
+			 <!-- <mat-hint>STREAM</mat-hint> --> 
+          </mat-form-field> 
+        </div> 
+      </div> 
+ 
+    </mat-card-content> 
+    <mat-card-actions> 
+      <button mat-raised-button color="primary" type="submit">Submit</button> 
+    </mat-card-actions> 
+  </mat-card> 
+</form> 
+ 

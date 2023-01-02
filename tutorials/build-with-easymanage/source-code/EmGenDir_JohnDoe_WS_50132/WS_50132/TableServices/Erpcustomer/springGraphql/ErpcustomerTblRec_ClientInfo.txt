@@ -1,0 +1,183 @@
+   
+Client Info For ErpcustomerTblRec  
+ 
+--------------------------- 
+ErpcustomerTblRec  
+--------------------------- 
+query { 
+	ErpcustomerTblRecViewAll { 
+	customerId  
+	name  
+	phone  
+	mobilePhone  
+	pict  
+	email  
+	website  
+	address  
+	dateofinquiry  
+	requestedqty  
+	reqquoteamt  
+	meetingpreftime  
+	created  
+	updated  
+ 
+	} 
+} 
+--------------------------- 
+query { 
+	ErpcustomerTblRecViewAllPaged(page: 0, size: 10) { 
+	customerId  
+	name  
+	phone  
+	mobilePhone  
+	pict  
+	email  
+	website  
+	address  
+	dateofinquiry  
+	requestedqty  
+	reqquoteamt  
+	meetingpreftime  
+	created  
+	updated  
+ 
+	} 
+} 
+--------------------------- 
+query { 
+	ErpcustomerTblRecSelectWhere(searchBy: "  customerId = "StringVal" or  customerId = "StringVal"  " , sortBy: " customerId " , page: 0, size: 10) { 
+	customerId  
+	name  
+	phone  
+	mobilePhone  
+	pict  
+	email  
+	website  
+	address  
+	dateofinquiry  
+	requestedqty  
+	reqquoteamt  
+	meetingpreftime  
+	created  
+	updated  
+ 
+	} 
+} 
+--------------------------- 
+query { 
+	ErpcustomerTblRecQuery(customerId: "StringVal") { 
+	customerId  
+	name  
+	phone  
+	mobilePhone  
+	pict  
+	email  
+	website  
+	address  
+	dateofinquiry  
+	requestedqty  
+	reqquoteamt  
+	meetingpreftime  
+	created  
+	updated  
+ 
+	} 
+} 
+--------------------------- 
+subscription { 
+	notifyErpcustomerTblRecQuery(customerId: "StringVal") { 
+	customerId  
+	name  
+	phone  
+	mobilePhone  
+	pict  
+	email  
+	website  
+	address  
+	dateofinquiry  
+	requestedqty  
+	reqquoteamt  
+	meetingpreftime  
+	created  
+	updated  
+ 
+	} 
+} 
+--------------------------- 
+mutation { 
+	ErpcustomerTblRecCreate(ErpcustomerTblRec1 : { 
+	customerId : "StringVal" , 
+	name : "StringVal" , 
+	phone : "StringVal" , 
+	mobilePhone : "StringVal" , 
+	pict : "StringVal" , 
+	email : "StringVal" , 
+	website : "StringVal" , 
+	address : "StringVal" , 
+	dateofinquiry : "" , 
+	requestedqty : 10 , 
+	reqquoteamt : 10.0 , 
+	meetingpreftime : "" , 
+	created : "" , 
+	updated : "" , 
+ 
+				}) { 
+	customerId  
+	name  
+	phone  
+	mobilePhone  
+	pict  
+	email  
+	website  
+	address  
+	dateofinquiry  
+	requestedqty  
+	reqquoteamt  
+	meetingpreftime  
+	created  
+	updated  
+ 
+	} 
+} 
+--------------------------- 
+mutation { 
+	ErpcustomerTblRecUpdate(customerId: "StringVal" ,  ErpcustomerTblRec1 : { 
+	customerId : "StringVal" , 
+	name : "StringVal" , 
+	phone : "StringVal" , 
+	mobilePhone : "StringVal" , 
+	pict : "StringVal" , 
+	email : "StringVal" , 
+	website : "StringVal" , 
+	address : "StringVal" , 
+	dateofinquiry : "" , 
+	requestedqty : 10 , 
+	reqquoteamt : 10.0 , 
+	meetingpreftime : "" , 
+	created : "" , 
+	updated : "" , 
+ 
+				}) { 
+	customerId  
+	name  
+	phone  
+	mobilePhone  
+	pict  
+	email  
+	website  
+	address  
+	dateofinquiry  
+	requestedqty  
+	reqquoteamt  
+	meetingpreftime  
+	created  
+	updated  
+ 
+	} 
+} 
+--------------------------- 
+mutation { 
+	ErpcustomerTblRecDelete(customerId: "StringVal") 
+} 
+--------------------------- 
+ 

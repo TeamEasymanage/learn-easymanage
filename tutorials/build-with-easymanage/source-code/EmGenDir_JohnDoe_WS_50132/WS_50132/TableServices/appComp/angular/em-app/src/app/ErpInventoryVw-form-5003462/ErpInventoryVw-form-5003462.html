@@ -1,0 +1,122 @@
+ 
+<form [formGroup]="ErpInventoryVwForm_5003462_CForm" novalidate (ngSubmit)="onSubmit()"> 
+  <mat-card class="shipping-card"> 
+    <mat-card-header> 
+      <mat-card-title>ErpInventoryVw</mat-card-title> 
+    </mat-card-header> 
+    <mat-card-content> 
+      <div class="row"> 
+        <div class="col"> 
+          <mat-form-field class="full-width">  <!-- width % can change in CSS --> 
+				<!-- invId : Java Type long : Json Type number  : EM Type NUMBER  --> 
+            <!-- size|maxlength="10" Display Size="10" --> 
+            <input matInput placeholder="invId" formControlName="invId"> 
+            <!-- <mat-error *ngIf="addressForm.controls['address'].hasError('required')"> 
+              Address is <strong>required</strong> 
+            </mat-error> --> 
+			 <mat-hint>Numeric</mat-hint> 
+          </mat-form-field> 
+        </div> 
+      </div> 
+      <div class="row"> 
+        <div class="col"> 
+          <mat-form-field class="full-width">  <!-- width % can change in CSS --> 
+				<!-- productId : Java Type long : Json Type number  : EM Type NUMBER  --> 
+            <!-- size|maxlength="10" Display Size="10" --> 
+            <input matInput placeholder="productId" formControlName="productId"> 
+            <!-- <mat-error *ngIf="addressForm.controls['address'].hasError('required')"> 
+              Address is <strong>required</strong> 
+            </mat-error> --> 
+			 <mat-hint>Numeric</mat-hint> 
+          </mat-form-field> 
+        </div> 
+      </div> 
+      <div class="row"> 
+        <div class="col"> 
+          <mat-form-field class="full-width">  <!-- width % can change in CSS --> 
+				<!-- productName : Java Type String : Json Type string  : EM Type CHAR  --> 
+            <!-- size|maxlength="50" Display Size="20" --> 
+            <input matInput placeholder="productName" formControlName="productName"> 
+            <!-- <mat-error *ngIf="addressForm.controls['address'].hasError('required')"> 
+              Address is <strong>required</strong> 
+            </mat-error> --> 
+			 <!-- <mat-hint>CHAR</mat-hint> --> 
+          </mat-form-field> 
+        </div> 
+      </div> 
+      <div class="row"> 
+        <div class="col"> 
+          <mat-form-field class="full-width">  <!-- width % can change in CSS --> 
+				<!-- invDate : Java Type Calendar : Json Type string  : EM Type DATE  --> 
+            <!-- size|maxlength="10" Display Size="10" --> 
+            <!-- <input matInput placeholder="invDate" formControlName="invDate"  > --> 
+            <input matInput placeholder="invDate" formControlName="invDate" [matDatepicker]="picker4" > 
+			      <mat-datepicker-toggle matSuffix [for]="picker4"></mat-datepicker-toggle> 
+			      <mat-datepicker #picker4></mat-datepicker> 
+            <!-- <mat-error *ngIf="addressForm.controls['address'].hasError('required')"> 
+              Address is <strong>required</strong> 
+            </mat-error> --> 
+			 <mat-hint>Date</mat-hint> 
+          </mat-form-field> 
+        </div> 
+      </div> 
+      <div class="row"> 
+        <div class="col"> 
+          <mat-form-field class="full-width">  <!-- width % can change in CSS --> 
+				<!-- invQty : Java Type long : Json Type number  : EM Type NUMBER  --> 
+            <!-- size|maxlength="10" Display Size="10" --> 
+            <input matInput placeholder="invQty" formControlName="invQty"> 
+            <!-- <mat-error *ngIf="addressForm.controls['address'].hasError('required')"> 
+              Address is <strong>required</strong> 
+            </mat-error> --> 
+			 <mat-hint>Numeric</mat-hint> 
+          </mat-form-field> 
+        </div> 
+      </div> 
+      <div class="row"> 
+        <div class="col"> 
+          <mat-form-field class="full-width">  <!-- width % can change in CSS --> 
+				<!-- invMinQty : Java Type long : Json Type number  : EM Type NUMBER  --> 
+            <!-- size|maxlength="10" Display Size="10" --> 
+            <input matInput placeholder="invMinQty" formControlName="invMinQty"> 
+            <!-- <mat-error *ngIf="addressForm.controls['address'].hasError('required')"> 
+              Address is <strong>required</strong> 
+            </mat-error> --> 
+			 <mat-hint>Numeric</mat-hint> 
+          </mat-form-field> 
+        </div> 
+      </div> 
+      <div class="row"> 
+        <div class="col"> 
+          <mat-form-field class="full-width">  <!-- width % can change in CSS --> 
+				<!-- invCost : Java Type float : Json Type string  : EM Type FLOAT  --> 
+            <!-- size|maxlength="15" Display Size="15" --> 
+            <input matInput placeholder="invCost" formControlName="invCost"> 
+            <!-- <mat-error *ngIf="addressForm.controls['address'].hasError('required')"> 
+              Address is <strong>required</strong> 
+            </mat-error> --> 
+			 <mat-hint>Numeric</mat-hint> 
+          </mat-form-field> 
+        </div> 
+      </div> 
+      <div class="row"> 
+        <div class="col"> 
+          <mat-form-field class="full-width">  <!-- width % can change in CSS --> 
+				<!-- invLocation : Java Type String : Json Type string  : EM Type CHAR  --> 
+            <!-- size|maxlength="50" Display Size="20" --> 
+            <input matInput placeholder="invLocation" formControlName="invLocation"> 
+            <!-- <mat-error *ngIf="addressForm.controls['address'].hasError('required')"> 
+              Address is <strong>required</strong> 
+            </mat-error> --> 
+			 <!-- <mat-hint>CHAR</mat-hint> --> 
+          </mat-form-field> 
+        </div> 
+      </div> 
+ 
+    </mat-card-content> 
+    <mat-card-actions> 
+      <button mat-raised-button color="primary" type="submit">Submit</button> 
+    </mat-card-actions> 
+  </mat-card> 
+</form> 
+ 

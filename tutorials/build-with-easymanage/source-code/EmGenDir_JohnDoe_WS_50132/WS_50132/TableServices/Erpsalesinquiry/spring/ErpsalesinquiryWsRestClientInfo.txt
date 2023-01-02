@@ -1,0 +1,222 @@
+Spring REST Services : Making client calls : ErpsalesinquiryWs 
+---------------------------------------------------------------- 
+ 
+Note: You can use Swagger UI to test APIs, try them out and send REST requests. 
+ 
+Access the API documentation With Swagger UI at:  
+http://localhost:9080/swagger-ui.html  
+ 
+Documentation of Spring REST APIs Using OpenAPI 3.0 : 
+ 
+The OpenAPI descriptions are available at the default path /v3/api-docs : 
+http://localhost:9080/v3/api-docs/ 
+ 
+Download OpenAPI definitions in yaml format: 
+http://localhost:9080/v3/api-docs.yaml 
+ 
+ 
+--------------- Calling ErpsalesinquiryformDisplayAll : [i.e. ErpsalesinquiryformDisplayAll] ------------ 
+ 
+* Display: DisplayAll 
+Request: GET 
+ 
+http://127.0.0.1:9080/emrest/JohnDoe/ErpsalesinquiryWs/ErpsalesinquiryformDisplayAll 
+ 
+ 
+ 
+---------------------------------------------------------------- 
+ 
+======== Additional General Information And Examples =========== 
+(  Please note generation of contents of this file will be updated on-going basis, some relative information can be found  
+	in ../jaxwsClient/src/ErpsalesinquiryWsClientWs.java file. )  
+ 
+Please refer to this generated file for more information on how to make client side calls. 
+------------------------------------ 
+General URLs : Acutator , HAL Browser 
+------------------------------------ 
+Actuator 
+http://127.0.0.1:9080/actuator 
+ 
+HAL Browser : 
+http://127.0.0.1:9080/ 
+http://127.0.0.1:9080/browser/index.html#/  
+TRY IN BROWSER : 
+/actuator/ 
+- To view all REST Endpoints 
+/actuator/mappings 
+- To view log of REST calls 
+/actuator/httptrace 
+ 
+The OpenAPI definitions in JSON format : 
+/v3/api-docs/ 
+ 
+----------------------------------------------------------- 
+Other Sample Project Specific URLs, For Usage Guidelines  
+----------------------------------------------------------- 
+ 
+Sample Spring URLs: 
+http://127.0.0.1:9080/emrest/MYTEMP01/AddressBookViewAdd/addressbookviewdisplaydisplayall 
+ 
+WebProject Type Specific Handling: 
+* Display: DisplayAll 
+Request: GET 
+e.g. 
+http://127.0.0.1:9080/emrest/MYTEMP01/AddressBookViewAdd/addressbookviewdisplaydisplayall 
+ 
+* Display: DisplayRecordNo 
+Request: GET 
+Send RecordNo as Query Parameter string p_recno: e.g. 
+http://127.0.0.1:9080/emrest/MYTEMP01/AddressBookViewAdd/addressbookdisplayrecordnodisplayrecordno?p_recno="5000158" 
+ 
+* Display: InputQuery 
+Request: POST 
+Send EmQueryParam object json in Body : Raw: Application/json :  
+ Use 'Send and Download' to capture result in file : e.g. 
+========================================================================================== 
+POST /emrest/MYTEMP01/AddressBookViewAdd/addressbookquerydisplayinputquery HTTP/1.1 
+Host: 127.0.0.1:9080 
+Content-Type: application/json 
+Cache-Control: no-cache 
+ 
+ { "queryLine": [	[ "Yes","","1485:CHAR:","Like","","%" ] 
+					,[ "Yes","AND","1486:CHAR:","Like","","%" ] 
+		], 
+ "queryArray": [ "1485:CHAR:","desc","200","0","%", "0","","","Yes","500","4","desc" ] 
+} 
+========================================================================================== 
+ 
+POST /emrest/MYTEMP02/WPcadtalinvoice/queryoncadtalinvoicedisplayinputquery HTTP/1.1 
+Host: 127.0.0.1:9080 
+Content-Type: application/json 
+Cache-Control: no-cache 
+ 
+  
+ { "queryLine": [	[ "Yes","","5000214:NUMBER:InvoiceID","=","","5" ]  
+					 
+		],  
+ "queryArray": [ "","","","0","", "0","","","","","","" ]  
+}  
+ 
+========================================================================================== 
+ 
+ 
+* Display: GET FILE (Download File) 
+Request: GET  
+Send RecordNo as Query Parameter string p_recno: e.g.  
+http://127.0.0.1:9080/emrest/MYTEMP01/AddressBookViewAdd/addressbookviewdisplaydisplayallgetfilepictrest?p_recno="5000138"  
+ 
+* Display: PUT FILE (Upload File) 
+Request: POST  
+Send RecordNo p_recno and MultiPartFile file as "Body : form-data" Parameters string p_recno: e.g.  
+http://127.0.0.1:9080/emrest/MYTEMP01/AddressBookViewAdd/addressbookviewdisplaydisplayallputfilepictrest 
+USE API testing tool : Construct Body with form-data 
+-------------Sample API testing tool Code----------------------------------- 
+POST /emrest/MYTEMP01/AddressBookViewAdd/addressbookviewdisplaydisplayallputfilepictrest HTTP/1.1 
+Host: 127.0.0.1:9080 
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW 
+ 
+Content-Disposition: form-data; name="p_recno" 
+ 
+5000140 
+Content-Disposition: form-data; name="file"; filename="fitness_tracker_site.txt"  
+Content-Type: text/plain 
+------------------------------------------------ 
+ 
+* Display: PUT FILE (of type Web URL) 
+** Not supported. 
+ 
+ 
+* Input :  
+Request: POST 
+Send String[][] p_fldvalarr object json in Body : Raw: Application/json : e.g. 
+http://127.0.0.1:9080/emrest/MYTEMP01/AddressBookViewAdd/addressbookaddinput 
+ 
+		[ 
+		[ "F1485", "Add1 Name 12345" ], 
+		[ "F1486", "Add1 Fld 1486 " ], 
+		[ "F1487", "Add1 Fld 1487 " ] 
+		] 
+ 
+--------------------------------- 
+ 
+* EditRecordNo :  
+Request: POST 
+Send String[][] p_fldvalarr object json in Body : Raw: Application/json : e.g. 
+(Note: Send the Record No to be edited as first pair in array.) 
+http://127.0.0.1:9080/emrest/MYTEMP01/AddressBookViewAdd/addressbookediteditrecordno 
+ 
+		[ 
+		[ "EDITRECNO", "5000158" ], 
+		[ "F1485", "Add1-Ed Name 12345" ], 
+		[ "F1486", "Add1-Ed Fld 1486 " ], 
+		[ "F1487", "Add1-Ed Fld 1487 " ] 
+		] 
+ 
+----------------------------------------------- 
+will receive error or ok json 
+ 
+----------------------------------------------- 
+For DisplayAll and Display InputQuery Calls : 
+Sample Example JSON returned for table employee 
+------------------------------------------------ 
+{
+  "employee": {
+    "employeeRecords": {
+      "employeeRec": [
+        {
+          "employeeFlds": {
+            "employeeid": 11,
+            "employeename": "Abcd Xyz",
+            "isactive": "Y",
+            "lastmodifiedby": "User1",
+            "lastmodifieddate": "2019-07-29T17:49:24.000+0000"
+          },
+          "recInfo": {
+            "srlNo": 1,
+            "recNo": 5000193,
+            "userId": "MYTEMP01",
+            "dataGrp": "MYTEMP01",
+            "appUser": "",
+            "created": null,
+            "createdBy": "",
+            "updated": null,
+            "updatedBy": "",
+            "perm": ""
+          }
+        },
+        {
+          "employeeFlds": {
+            "employeeid": 22,
+            "employeename": "Abcd2 Xyz2",
+            "isactive": "Y",
+            "lastmodifiedby": "User1",
+            "lastmodifieddate": "2019-07-29T17:49:24.000+0000"
+          },
+          "recInfo": {
+            "srlNo": 2,
+            "recNo": 5000194,
+            "userId": "MYTEMP01",
+            "dataGrp": "MYTEMP01",
+            "appUser": "",
+            "created": null,
+            "createdBy": "",
+            "updated": null,
+            "updatedBy": "",
+            "perm": ""
+          }
+        }
+      ]
+    },
+    "schemaInfo": null
+  },
+  "wpInfo": {
+    "wpStatus": 1,
+    "wpMessage": "",
+    "wpError": "",
+    "wpRecords": 2,
+    "wpSrlNo": 1,
+    "wpRecNo": 0
+  }
+}
+----------------------------------------------- 
+ 

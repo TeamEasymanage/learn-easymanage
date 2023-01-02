@@ -1,0 +1,111 @@
+   
+Client Info For ErpproductTblRec  
+ 
+--------------------------- 
+ErpproductTblRec  
+--------------------------- 
+query { 
+	ErpproductTblRecViewAll { 
+	productId  
+	productName  
+	productCategory  
+	primarySupplier  
+	productDesc  
+	productPicture  
+ 
+	} 
+} 
+--------------------------- 
+query { 
+	ErpproductTblRecViewAllPaged(page: 0, size: 10) { 
+	productId  
+	productName  
+	productCategory  
+	primarySupplier  
+	productDesc  
+	productPicture  
+ 
+	} 
+} 
+--------------------------- 
+query { 
+	ErpproductTblRecSelectWhere(searchBy: "  productId = 10 or  productId = 10  " , sortBy: " productId " , page: 0, size: 10) { 
+	productId  
+	productName  
+	productCategory  
+	primarySupplier  
+	productDesc  
+	productPicture  
+ 
+	} 
+} 
+--------------------------- 
+query { 
+	ErpproductTblRecQuery(productId: 10) { 
+	productId  
+	productName  
+	productCategory  
+	primarySupplier  
+	productDesc  
+	productPicture  
+ 
+	} 
+} 
+--------------------------- 
+subscription { 
+	notifyErpproductTblRecQuery(productId: 10) { 
+	productId  
+	productName  
+	productCategory  
+	primarySupplier  
+	productDesc  
+	productPicture  
+ 
+	} 
+} 
+--------------------------- 
+mutation { 
+	ErpproductTblRecCreate(ErpproductTblRec1 : { 
+	productId : 10 , 
+	productName : "StringVal" , 
+	productCategory : "StringVal" , 
+	primarySupplier : "StringVal" , 
+	productDesc : "StringVal" , 
+	productPicture : "StringVal" , 
+ 
+				}) { 
+	productId  
+	productName  
+	productCategory  
+	primarySupplier  
+	productDesc  
+	productPicture  
+ 
+	} 
+} 
+--------------------------- 
+mutation { 
+	ErpproductTblRecUpdate(productId: 10 ,  ErpproductTblRec1 : { 
+	productId : 10 , 
+	productName : "StringVal" , 
+	productCategory : "StringVal" , 
+	primarySupplier : "StringVal" , 
+	productDesc : "StringVal" , 
+	productPicture : "StringVal" , 
+ 
+				}) { 
+	productId  
+	productName  
+	productCategory  
+	primarySupplier  
+	productDesc  
+	productPicture  
+ 
+	} 
+} 
+--------------------------- 
+mutation { 
+	ErpproductTblRecDelete(productId: 10) 
+} 
+--------------------------- 
+ 

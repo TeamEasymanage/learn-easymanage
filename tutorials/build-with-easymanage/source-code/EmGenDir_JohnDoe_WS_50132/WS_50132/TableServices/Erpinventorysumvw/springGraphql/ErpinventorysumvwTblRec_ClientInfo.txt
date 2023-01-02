@@ -1,0 +1,84 @@
+   
+Client Info For ErpinventorysumvwTblRec  
+ 
+--------------------------- 
+ErpinventorysumvwTblRec  
+--------------------------- 
+query { 
+	ErpinventorysumvwTblRecViewAll { 
+	year  
+	month  
+	totalQty  
+ 
+	} 
+} 
+--------------------------- 
+query { 
+	ErpinventorysumvwTblRecViewAllPaged(page: 0, size: 10) { 
+	year  
+	month  
+	totalQty  
+ 
+	} 
+} 
+--------------------------- 
+query { 
+	ErpinventorysumvwTblRecSelectWhere(searchBy: "  year = 10 or  year = 10  " , sortBy: " year " , page: 0, size: 10) { 
+	year  
+	month  
+	totalQty  
+ 
+	} 
+} 
+--------------------------- 
+query { 
+	ErpinventorysumvwTblRecQuery(year: 10) { 
+	year  
+	month  
+	totalQty  
+ 
+	} 
+} 
+--------------------------- 
+subscription { 
+	notifyErpinventorysumvwTblRecQuery(year: 10) { 
+	year  
+	month  
+	totalQty  
+ 
+	} 
+} 
+--------------------------- 
+mutation { 
+	ErpinventorysumvwTblRecCreate(ErpinventorysumvwTblRec1 : { 
+	year : 10 , 
+	month : 10 , 
+	totalQty : 10.0 , 
+ 
+				}) { 
+	year  
+	month  
+	totalQty  
+ 
+	} 
+} 
+--------------------------- 
+mutation { 
+	ErpinventorysumvwTblRecUpdate(year: 10 ,  ErpinventorysumvwTblRec1 : { 
+	year : 10 , 
+	month : 10 , 
+	totalQty : 10.0 , 
+ 
+				}) { 
+	year  
+	month  
+	totalQty  
+ 
+	} 
+} 
+--------------------------- 
+mutation { 
+	ErpinventorysumvwTblRecDelete(year: 10) 
+} 
+--------------------------- 
+ 

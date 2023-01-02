@@ -1,0 +1,44 @@
+<?xml version="1.0" ?>  
+    
+<ws1:ErpsalesinquiryWs xmlns:ws1="http://emws50.ErpsalesinquiryWs/jaxb/ErpsalesinquiryWs" >  
+<ErpsalesinquiryForm>  
+    <Erpsalesinquiry> 
+        <ErpsalesinquiryRecords> 
+            <ErpsalesinquiryRec> 
+                <ErpsalesinquiryFlds> 
+                <DateOfInquiry>2006-06-01-05:30</DateOfInquiry> 
+                <RequestedQty>1234</RequestedQty> 
+                <ReqQuoteAmt>1234.56</ReqQuoteAmt> 
+                <MeetingPrefTime>14:10:00-05:30</MeetingPrefTime> 
+                <Created>2006-06-01T14:10:00-05:30</Created> 
+                <Updated>2006-06-01T14:10:00-05:30</Updated> 
+                </ErpsalesinquiryFlds> 
+                <RecInfo> 
+                    <SrlNo>1</SrlNo> 
+                    <RecNo>10010</RecNo> 
+                    <UserId>DEMO</UserId> 
+                    <DataGrp>DEMO</DataGrp> 
+                    <AppUser>DEMO</AppUser> 
+                    <Created>2006-06-01T14:10:00-05:30</Created> 
+                    <CreatedBy>DEMO</CreatedBy> 
+                    <Updated>2006-06-01T14:10:00-05:30</Updated> 
+                    <UpdatedBy>DEMO</UpdatedBy> 
+                    <Perm></Perm> 
+                </RecInfo> 
+            </ErpsalesinquiryRec> 
+        </ErpsalesinquiryRecords> 
+    </Erpsalesinquiry> 
+    <WpInfo> 
+        <WpStatus>1</WpStatus> 
+        <WpMessage></WpMessage> 
+        <WpError></WpError> 
+        <WpErrorInfo></WpErrorInfo> 
+        <WpRecords>1</WpRecords> 
+        <WpSrlNo>1</WpSrlNo> 
+        <WpRecNo>10010</WpRecNo> 
+    </WpInfo> 
+</ErpsalesinquiryForm>  
+    
+    
+</ws1:ErpsalesinquiryWs>  
+    

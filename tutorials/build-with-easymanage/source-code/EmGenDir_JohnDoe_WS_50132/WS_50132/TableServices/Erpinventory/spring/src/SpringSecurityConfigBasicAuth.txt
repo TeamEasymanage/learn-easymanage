@@ -1,0 +1,66 @@
+
+/* ---------------------------------------------
+	To enable Spring Rest Security - Http Basic Auth
+	Steps -
+    1] pom.xml : Uncomment dependency spring-boot-starter-security
+	2] Rename SpringSecurityConfigBasicAuth.txt (this file) to SpringSecurityConfigBasicAuth.java
+	Clean and Re-build project
+   ---------------------------------------------
+*/
+
+
+package emrest.spring;  
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.http.HttpMethod;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.context.annotation.Bean;
+
+@Configuration
+@EnableWebSecurity
+public class SpringSecurityConfigBasicAuth extends WebSecurityConfigurerAdapter {
+
+	@Autowired
+	public void configureGlobal(AuthenticationManagerBuilder authenticationMgr) throws Exception {
+		authenticationMgr.inMemoryAuthentication()
+			.withUser("emUser").password(passwordEncoder().encode("emUser123")).authorities("ROLE_USER")
+			.and()
+			.withUser("emAdmin").password(passwordEncoder().encode("emAdmin123")).authorities("ROLE_USER","ROLE_ADMIN");
+	}
+	
+	@Override
+	protected void configure(HttpSecurity http) throws Exception {
+
+		
+		http.authorizeRequests()
+			.antMatchers(HttpMethod.GET, "**/ViewAll").access("hasRole('ROLE_USER')")
+			.antMatchers(HttpMethod.GET, "**/SelectWhere").access("hasRole('ROLE_USER')")
+			.antMatchers(HttpMethod.GET, "**/Query**").access("hasRole('ROLE_USER')")
+			//.antMatchers(HttpMethod.GET, "**/FindByColumnName**").access("hasRole('ROLE_USER')")
+			.antMatchers(HttpMethod.POST, "**/Create").access("hasRole('ROLE_USER')")
+			.antMatchers(HttpMethod.PUT,"**/Update**").access("hasRole('ROLE_USER') or hasRole('ROLE_ADMIN')")
+			.antMatchers(HttpMethod.DELETE,"**/Delete**").access("hasRole('ROLE_ADMIN')")
+				.anyRequest()
+				.authenticated()
+				.and()
+				.httpBasic()
+				//.and().anonymous().disable()
+			;
+		http.cors().disable();
+		http.csrf().disable();
+		http.headers().frameOptions().disable();
+
+		super.configure(http);
+
+	}
+	@Bean
+	public PasswordEncoder passwordEncoder() {
+		return new BCryptPasswordEncoder();
+	}
+}

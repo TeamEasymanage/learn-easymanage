@@ -1,0 +1,66 @@
+   
+# Defined in Root schema 
+# scalar EmCalendar | EmDateTime | EmDate | EmTime 
+   
+type ErpcustomerTblRec { 
+ 
+	customerId: String 
+	name: String 
+	phone: String 
+	mobilePhone: String 
+	pict: String 
+	email: String 
+	website: String 
+	address: String 
+	dateofinquiry: EmDate 
+	requestedqty: Int 
+	reqquoteamt: Float 
+	meetingpreftime: EmTime 
+	created: EmDateTime 
+	updated: EmDateTime 
+ 
+} 
+ 
+input ErpcustomerTblRecInput { 
+ 
+	customerId: String 
+	name: String 
+	phone: String 
+	mobilePhone: String 
+	pict: String 
+	email: String 
+	website: String 
+	address: String 
+	dateofinquiry: EmDate 
+	requestedqty: Int 
+	reqquoteamt: Float 
+	meetingpreftime: EmTime 
+	created: EmDateTime 
+	updated: EmDateTime 
+ 
+} 
+ 
+extend type Query { 
+	ErpcustomerTblRecViewAll: [ErpcustomerTblRec]! 
+	ErpcustomerTblRecViewAllPaged(page: Int, size: Int)  : [ErpcustomerTblRec]! 
+	ErpcustomerTblRecSelectWhere(searchBy: String, sortBy: String, page: Int = 0, size: Int = 10)  : [ErpcustomerTblRec]! 
+	# ErpcustomerTblRecDataMesh: [ErpcustomerTblRec]! 
+} 
+extend type Query { 
+	ErpcustomerTblRecQuery(customerId: String): [ErpcustomerTblRec]! 
+} 
+ 
+extend type Subscription { 
+	notifyErpcustomerTblRecQuery(customerId: String): [ErpcustomerTblRec]! 
+} 
+ 
+extend type Mutation { 
+	ErpcustomerTblRecCreate(ErpcustomerTblRec1: ErpcustomerTblRecInput ): ErpcustomerTblRec 
+} 
+extend type Mutation { 
+	ErpcustomerTblRecUpdate(customerId: String, ErpcustomerTblRec1: ErpcustomerTblRecInput ): ErpcustomerTblRec 
+} 
+extend type Mutation { 
+	ErpcustomerTblRecDelete(customerId: String): Int 
+} 
+ 

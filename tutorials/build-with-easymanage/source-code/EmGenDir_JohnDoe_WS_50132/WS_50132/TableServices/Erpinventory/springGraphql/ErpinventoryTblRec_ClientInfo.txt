@@ -1,0 +1,120 @@
+   
+Client Info For ErpinventoryTblRec  
+ 
+--------------------------- 
+ErpinventoryTblRec  
+--------------------------- 
+query { 
+	ErpinventoryTblRecViewAll { 
+	invId  
+	productId  
+	invDate  
+	invQty  
+	invMinQty  
+	invCost  
+	invLocation  
+ 
+	} 
+} 
+--------------------------- 
+query { 
+	ErpinventoryTblRecViewAllPaged(page: 0, size: 10) { 
+	invId  
+	productId  
+	invDate  
+	invQty  
+	invMinQty  
+	invCost  
+	invLocation  
+ 
+	} 
+} 
+--------------------------- 
+query { 
+	ErpinventoryTblRecSelectWhere(searchBy: "  invId = 10 or  invId = 10  " , sortBy: " invId " , page: 0, size: 10) { 
+	invId  
+	productId  
+	invDate  
+	invQty  
+	invMinQty  
+	invCost  
+	invLocation  
+ 
+	} 
+} 
+--------------------------- 
+query { 
+	ErpinventoryTblRecQuery(invId: 10) { 
+	invId  
+	productId  
+	invDate  
+	invQty  
+	invMinQty  
+	invCost  
+	invLocation  
+ 
+	} 
+} 
+--------------------------- 
+subscription { 
+	notifyErpinventoryTblRecQuery(invId: 10) { 
+	invId  
+	productId  
+	invDate  
+	invQty  
+	invMinQty  
+	invCost  
+	invLocation  
+ 
+	} 
+} 
+--------------------------- 
+mutation { 
+	ErpinventoryTblRecCreate(ErpinventoryTblRec1 : { 
+	invId : 10 , 
+	productId : 10 , 
+	invDate : "" , 
+	invQty : 10 , 
+	invMinQty : 10 , 
+	invCost : 10.0 , 
+	invLocation : "StringVal" , 
+ 
+				}) { 
+	invId  
+	productId  
+	invDate  
+	invQty  
+	invMinQty  
+	invCost  
+	invLocation  
+ 
+	} 
+} 
+--------------------------- 
+mutation { 
+	ErpinventoryTblRecUpdate(invId: 10 ,  ErpinventoryTblRec1 : { 
+	invId : 10 , 
+	productId : 10 , 
+	invDate : "" , 
+	invQty : 10 , 
+	invMinQty : 10 , 
+	invCost : 10.0 , 
+	invLocation : "StringVal" , 
+ 
+				}) { 
+	invId  
+	productId  
+	invDate  
+	invQty  
+	invMinQty  
+	invCost  
+	invLocation  
+ 
+	} 
+} 
+--------------------------- 
+mutation { 
+	ErpinventoryTblRecDelete(invId: 10) 
+} 
+--------------------------- 
+ 

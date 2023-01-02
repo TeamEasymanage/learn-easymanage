@@ -1,0 +1,129 @@
+   
+Client Info For ErpinventoryvwTblRec  
+ 
+--------------------------- 
+ErpinventoryvwTblRec  
+--------------------------- 
+query { 
+	ErpinventoryvwTblRecViewAll { 
+	invId  
+	productId  
+	productName  
+	invDate  
+	invQty  
+	invMinQty  
+	invCost  
+	invLocation  
+ 
+	} 
+} 
+--------------------------- 
+query { 
+	ErpinventoryvwTblRecViewAllPaged(page: 0, size: 10) { 
+	invId  
+	productId  
+	productName  
+	invDate  
+	invQty  
+	invMinQty  
+	invCost  
+	invLocation  
+ 
+	} 
+} 
+--------------------------- 
+query { 
+	ErpinventoryvwTblRecSelectWhere(searchBy: "  invId = 10 or  invId = 10  " , sortBy: " invId " , page: 0, size: 10) { 
+	invId  
+	productId  
+	productName  
+	invDate  
+	invQty  
+	invMinQty  
+	invCost  
+	invLocation  
+ 
+	} 
+} 
+--------------------------- 
+query { 
+	ErpinventoryvwTblRecQuery(invId: 10) { 
+	invId  
+	productId  
+	productName  
+	invDate  
+	invQty  
+	invMinQty  
+	invCost  
+	invLocation  
+ 
+	} 
+} 
+--------------------------- 
+subscription { 
+	notifyErpinventoryvwTblRecQuery(invId: 10) { 
+	invId  
+	productId  
+	productName  
+	invDate  
+	invQty  
+	invMinQty  
+	invCost  
+	invLocation  
+ 
+	} 
+} 
+--------------------------- 
+mutation { 
+	ErpinventoryvwTblRecCreate(ErpinventoryvwTblRec1 : { 
+	invId : 10 , 
+	productId : 10 , 
+	productName : "StringVal" , 
+	invDate : "" , 
+	invQty : 10 , 
+	invMinQty : 10 , 
+	invCost : 10.0 , 
+	invLocation : "StringVal" , 
+ 
+				}) { 
+	invId  
+	productId  
+	productName  
+	invDate  
+	invQty  
+	invMinQty  
+	invCost  
+	invLocation  
+ 
+	} 
+} 
+--------------------------- 
+mutation { 
+	ErpinventoryvwTblRecUpdate(invId: 10 ,  ErpinventoryvwTblRec1 : { 
+	invId : 10 , 
+	productId : 10 , 
+	productName : "StringVal" , 
+	invDate : "" , 
+	invQty : 10 , 
+	invMinQty : 10 , 
+	invCost : 10.0 , 
+	invLocation : "StringVal" , 
+ 
+				}) { 
+	invId  
+	productId  
+	productName  
+	invDate  
+	invQty  
+	invMinQty  
+	invCost  
+	invLocation  
+ 
+	} 
+} 
+--------------------------- 
+mutation { 
+	ErpinventoryvwTblRecDelete(invId: 10) 
+} 
+--------------------------- 
+ 

@@ -1,0 +1,46 @@
+<div class="mat-elevation-z8"> 
+  <table mat-table #table class="full-width-table" matSort aria-label="Elements"> 
+		<!-- productId : Java Type long : Json Type number  : EM Type NUMBER  --> 
+    <ng-container matColumnDef="productId"> 
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>productId</th> 
+      <td mat-cell *matCellDef="let row">{{row.productId}}</td> 
+    </ng-container> 
+		<!-- productName : Java Type String : Json Type string  : EM Type CHAR  --> 
+    <ng-container matColumnDef="productName"> 
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>productName</th> 
+      <td mat-cell *matCellDef="let row">{{row.productName}}</td> 
+    </ng-container> 
+		<!-- productCategory : Java Type String : Json Type string  : EM Type CHAR  --> 
+    <ng-container matColumnDef="productCategory"> 
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>productCategory</th> 
+      <td mat-cell *matCellDef="let row">{{row.productCategory}}</td> 
+    </ng-container> 
+		<!-- primarySupplier : Java Type String : Json Type string  : EM Type CHAR  --> 
+    <ng-container matColumnDef="primarySupplier"> 
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>primarySupplier</th> 
+      <td mat-cell *matCellDef="let row">{{row.primarySupplier}}</td> 
+    </ng-container> 
+		<!-- productDesc : Java Type String : Json Type string  : EM Type TEXT  --> 
+    <ng-container matColumnDef="productDesc"> 
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>productDesc</th> 
+      <td mat-cell *matCellDef="let row">{{row.productDesc}}</td> 
+    </ng-container> 
+		<!-- productPicture : Java Type byte[] : Json Type string  : EM Type STREAM  --> 
+    <ng-container matColumnDef="productPicture"> 
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>productPicture</th> 
+      <td mat-cell *matCellDef="let row">{{row.productPicture}}</td> 
+    </ng-container> 
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr> 
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr> 
+  </table> 
+ 
+  <mat-paginator #paginator 
+      [length]="dataSource.data.length" 
+      [pageIndex]="0" 
+      [pageSize]="10" 
+      [pageSizeOptions]="[5, 10, 20]" 
+      aria-label="Select page"> 
+  </mat-paginator> 
+</div> 
+  

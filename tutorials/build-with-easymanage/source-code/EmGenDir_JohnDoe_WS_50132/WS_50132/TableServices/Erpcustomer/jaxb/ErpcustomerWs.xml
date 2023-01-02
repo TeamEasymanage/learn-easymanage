@@ -1,0 +1,52 @@
+<?xml version="1.0" ?>  
+    
+<ws1:ErpcustomerWs xmlns:ws1="http://emws50.ErpcustomerWs/jaxb/ErpcustomerWs" >  
+<ErpcustomerForm>  
+    <Erpcustomer> 
+        <ErpcustomerRecords> 
+            <ErpcustomerRec> 
+                <ErpcustomerFlds> 
+                <CustomerId>ABCD_string</CustomerId> 
+                <Name>ABCD_string</Name> 
+                <Phone>ABCD_string</Phone> 
+                <MobilePhone>ABCD_string</MobilePhone> 
+                <Pict>base64Binary_DATA</Pict> 
+                <Email>ABCD_string</Email> 
+                <WebSite>ABCD_string</WebSite> 
+                <Address>ABCD_string</Address> 
+                <DateOfInquiry>2006-06-01-05:30</DateOfInquiry> 
+                <RequestedQty>1234</RequestedQty> 
+                <ReqQuoteAmt>1234.56</ReqQuoteAmt> 
+                <MeetingPrefTime>14:10:00-05:30</MeetingPrefTime> 
+                <Created>2006-06-01T14:10:00-05:30</Created> 
+                <Updated>2006-06-01T14:10:00-05:30</Updated> 
+                </ErpcustomerFlds> 
+                <RecInfo> 
+                    <SrlNo>1</SrlNo> 
+                    <RecNo>10010</RecNo> 
+                    <UserId>DEMO</UserId> 
+                    <DataGrp>DEMO</DataGrp> 
+                    <AppUser>DEMO</AppUser> 
+                    <Created>2006-06-01T14:10:00-05:30</Created> 
+                    <CreatedBy>DEMO</CreatedBy> 
+                    <Updated>2006-06-01T14:10:00-05:30</Updated> 
+                    <UpdatedBy>DEMO</UpdatedBy> 
+                    <Perm></Perm> 
+                </RecInfo> 
+            </ErpcustomerRec> 
+        </ErpcustomerRecords> 
+    </Erpcustomer> 
+    <WpInfo> 
+        <WpStatus>1</WpStatus> 
+        <WpMessage></WpMessage> 
+        <WpError></WpError> 
+        <WpErrorInfo></WpErrorInfo> 
+        <WpRecords>1</WpRecords> 
+        <WpSrlNo>1</WpSrlNo> 
+        <WpRecNo>10010</WpRecNo> 
+    </WpInfo> 
+</ErpcustomerForm>  
+    
+    
+</ws1:ErpcustomerWs>  
+    

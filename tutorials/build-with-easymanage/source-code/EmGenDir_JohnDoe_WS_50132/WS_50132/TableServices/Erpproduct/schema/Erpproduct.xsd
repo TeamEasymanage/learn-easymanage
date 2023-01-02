@@ -1,0 +1,42 @@
+<xsd:schema  
+    targetNamespace="http://emws50.TableServices/Erpproduct/schema/" 
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+    xmlns:tcm="http://emws50.TableServices/common/jaxb/" 
+    xmlns:tbl="http://emws50.TableServices/Erpproduct/schema/" > 
+    
+<xsd:import 
+    namespace="http://emws50.TableServices/common/jaxb/" 
+    schemaLocation="../../../TableServices/common/jaxb/RecInfo.xsd"/> 
+ 
+<xsd:complexType name="Erpproduct"> 
+    <xsd:sequence> 
+        <xsd:element name="ErpproductRecords" type="tbl:ErpproductRecords"/> 
+        <xsd:element name="SchemaInfo" type="tcm:SchemaInfo"/> 
+    </xsd:sequence> 
+</xsd:complexType> 
+ 
+<xsd:complexType name="ErpproductRecords"> 
+    <xsd:sequence> 
+        <xsd:element name="ErpproductRec" minOccurs="0" maxOccurs="unbounded"> 
+            <xsd:complexType> 
+                <xsd:sequence> 
+                    <xsd:element name="ErpproductFlds" type="tbl:ErpproductFlds"/> 
+                    <xsd:element name="RecInfo" type="tcm:RecInfo"/> 
+                </xsd:sequence> 
+            </xsd:complexType> 
+        </xsd:element> 
+    </xsd:sequence> 
+</xsd:complexType> 
+ 
+<xsd:complexType name="ErpproductFlds"> 
+    <xsd:sequence> 
+        <xsd:element name="productid" type="xsd:integer"/> 
+        <xsd:element name="productname" type="xsd:string"/> 
+        <xsd:element name="productcategory" type="xsd:string"/> 
+        <xsd:element name="primarysupplier" type="xsd:string"/> 
+        <xsd:element name="productdesc" type="xsd:string"/> 
+        <xsd:element name="productpicture" type="xsd:base64Binary"/> 
+    </xsd:sequence> 
+</xsd:complexType> 
+    
+</xsd:schema> 

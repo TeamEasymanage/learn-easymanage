@@ -1,0 +1,42 @@
+<xsd:schema  
+    targetNamespace="http://emws50.TableServices/Erpsalesinquiry/schema/" 
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+    xmlns:tcm="http://emws50.TableServices/common/jaxb/" 
+    xmlns:tbl="http://emws50.TableServices/Erpsalesinquiry/schema/" > 
+    
+<xsd:import 
+    namespace="http://emws50.TableServices/common/jaxb/" 
+    schemaLocation="../../../TableServices/common/jaxb/RecInfo.xsd"/> 
+ 
+<xsd:complexType name="Erpsalesinquiry"> 
+    <xsd:sequence> 
+        <xsd:element name="ErpsalesinquiryRecords" type="tbl:ErpsalesinquiryRecords"/> 
+        <xsd:element name="SchemaInfo" type="tcm:SchemaInfo"/> 
+    </xsd:sequence> 
+</xsd:complexType> 
+ 
+<xsd:complexType name="ErpsalesinquiryRecords"> 
+    <xsd:sequence> 
+        <xsd:element name="ErpsalesinquiryRec" minOccurs="0" maxOccurs="unbounded"> 
+            <xsd:complexType> 
+                <xsd:sequence> 
+                    <xsd:element name="ErpsalesinquiryFlds" type="tbl:ErpsalesinquiryFlds"/> 
+                    <xsd:element name="RecInfo" type="tcm:RecInfo"/> 
+                </xsd:sequence> 
+            </xsd:complexType> 
+        </xsd:element> 
+    </xsd:sequence> 
+</xsd:complexType> 
+ 
+<xsd:complexType name="ErpsalesinquiryFlds"> 
+    <xsd:sequence> 
+        <xsd:element name="DateOfInquiry" type="xsd:date"/> 
+        <xsd:element name="RequestedQty" type="xsd:integer"/> 
+        <xsd:element name="ReqQuoteAmt" type="xsd:float"/> 
+        <xsd:element name="MeetingPrefTime" type="xsd:time"/> 
+        <xsd:element name="Created" type="xsd:dateTime"/> 
+        <xsd:element name="Updated" type="xsd:dateTime"/> 
+    </xsd:sequence> 
+</xsd:complexType> 
+    
+</xsd:schema> 

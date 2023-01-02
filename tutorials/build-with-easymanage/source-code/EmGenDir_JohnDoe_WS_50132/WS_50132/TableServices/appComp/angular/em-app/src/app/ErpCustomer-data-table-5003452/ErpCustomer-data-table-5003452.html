@@ -1,0 +1,86 @@
+<div class="mat-elevation-z8"> 
+  <table mat-table #table class="full-width-table" matSort aria-label="Elements"> 
+		<!-- customerId : Java Type String : Json Type string  : EM Type CHAR  --> 
+    <ng-container matColumnDef="customerId"> 
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>customerId</th> 
+      <td mat-cell *matCellDef="let row">{{row.customerId}}</td> 
+    </ng-container> 
+		<!-- name : Java Type String : Json Type string  : EM Type CHAR  --> 
+    <ng-container matColumnDef="name"> 
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>name</th> 
+      <td mat-cell *matCellDef="let row">{{row.name}}</td> 
+    </ng-container> 
+		<!-- phone : Java Type String : Json Type string  : EM Type CHAR  --> 
+    <ng-container matColumnDef="phone"> 
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>phone</th> 
+      <td mat-cell *matCellDef="let row">{{row.phone}}</td> 
+    </ng-container> 
+		<!-- mobilePhone : Java Type String : Json Type string  : EM Type CHAR  --> 
+    <ng-container matColumnDef="mobilePhone"> 
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>mobilePhone</th> 
+      <td mat-cell *matCellDef="let row">{{row.mobilePhone}}</td> 
+    </ng-container> 
+		<!-- pict : Java Type byte[] : Json Type string  : EM Type STREAM  --> 
+    <ng-container matColumnDef="pict"> 
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>pict</th> 
+      <td mat-cell *matCellDef="let row">{{row.pict}}</td> 
+    </ng-container> 
+		<!-- email : Java Type String : Json Type string  : EM Type CHAR  --> 
+    <ng-container matColumnDef="email"> 
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>email</th> 
+      <td mat-cell *matCellDef="let row">{{row.email}}</td> 
+    </ng-container> 
+		<!-- website : Java Type String : Json Type string  : EM Type CHAR  --> 
+    <ng-container matColumnDef="website"> 
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>website</th> 
+      <td mat-cell *matCellDef="let row">{{row.website}}</td> 
+    </ng-container> 
+		<!-- address : Java Type String : Json Type string  : EM Type TEXT  --> 
+    <ng-container matColumnDef="address"> 
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>address</th> 
+      <td mat-cell *matCellDef="let row">{{row.address}}</td> 
+    </ng-container> 
+		<!-- dateofinquiry : Java Type Calendar : Json Type string  : EM Type DATE  --> 
+    <ng-container matColumnDef="dateofinquiry"> 
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>dateofinquiry</th> 
+      <td mat-cell *matCellDef="let row">{{row.dateofinquiry}}</td> 
+    </ng-container> 
+		<!-- requestedqty : Java Type long : Json Type number  : EM Type NUMBER  --> 
+    <ng-container matColumnDef="requestedqty"> 
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>requestedqty</th> 
+      <td mat-cell *matCellDef="let row">{{row.requestedqty}}</td> 
+    </ng-container> 
+		<!-- reqquoteamt : Java Type float : Json Type string  : EM Type FLOAT  --> 
+    <ng-container matColumnDef="reqquoteamt"> 
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>reqquoteamt</th> 
+      <td mat-cell *matCellDef="let row">{{row.reqquoteamt}}</td> 
+    </ng-container> 
+		<!-- meetingpreftime : Java Type Calendar : Json Type string  : EM Type TIME  --> 
+    <ng-container matColumnDef="meetingpreftime"> 
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>meetingpreftime</th> 
+      <td mat-cell *matCellDef="let row">{{row.meetingpreftime}}</td> 
+    </ng-container> 
+		<!-- created : Java Type Calendar : Json Type string  : EM Type DATETIME  --> 
+    <ng-container matColumnDef="created"> 
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>created</th> 
+      <td mat-cell *matCellDef="let row">{{row.created}}</td> 
+    </ng-container> 
+		<!-- updated : Java Type Calendar : Json Type string  : EM Type DATETIME  --> 
+    <ng-container matColumnDef="updated"> 
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>updated</th> 
+      <td mat-cell *matCellDef="let row">{{row.updated}}</td> 
+    </ng-container> 
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr> 
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr> 
+  </table> 
+ 
+  <mat-paginator #paginator 
+      [length]="dataSource.data.length" 
+      [pageIndex]="0" 
+      [pageSize]="10" 
+      [pageSizeOptions]="[5, 10, 20]" 
+      aria-label="Select page"> 
+  </mat-paginator> 
+</div> 
+  

@@ -1,0 +1,54 @@
+ 
+<form [formGroup]="ErpInventorySumVwForm_5003460_CForm" novalidate (ngSubmit)="onSubmit()"> 
+  <mat-card class="shipping-card"> 
+    <mat-card-header> 
+      <mat-card-title>ErpInventorySumVw</mat-card-title> 
+    </mat-card-header> 
+    <mat-card-content> 
+      <div class="row"> 
+        <div class="col"> 
+          <mat-form-field class="full-width">  <!-- width % can change in CSS --> 
+				<!-- year : Java Type long : Json Type number  : EM Type NUMBER  --> 
+            <!-- size|maxlength="10" Display Size="10" --> 
+            <input matInput placeholder="year" formControlName="year"> 
+            <!-- <mat-error *ngIf="addressForm.controls['address'].hasError('required')"> 
+              Address is <strong>required</strong> 
+            </mat-error> --> 
+			 <mat-hint>Numeric</mat-hint> 
+          </mat-form-field> 
+        </div> 
+      </div> 
+      <div class="row"> 
+        <div class="col"> 
+          <mat-form-field class="full-width">  <!-- width % can change in CSS --> 
+				<!-- month : Java Type long : Json Type number  : EM Type NUMBER  --> 
+            <!-- size|maxlength="10" Display Size="10" --> 
+            <input matInput placeholder="month" formControlName="month"> 
+            <!-- <mat-error *ngIf="addressForm.controls['address'].hasError('required')"> 
+              Address is <strong>required</strong> 
+            </mat-error> --> 
+			 <mat-hint>Numeric</mat-hint> 
+          </mat-form-field> 
+        </div> 
+      </div> 
+      <div class="row"> 
+        <div class="col"> 
+          <mat-form-field class="full-width">  <!-- width % can change in CSS --> 
+				<!-- totalQty : Java Type float : Json Type string  : EM Type FLOAT  --> 
+            <!-- size|maxlength="15" Display Size="15" --> 
+            <input matInput placeholder="totalQty" formControlName="totalQty"> 
+            <!-- <mat-error *ngIf="addressForm.controls['address'].hasError('required')"> 
+              Address is <strong>required</strong> 
+            </mat-error> --> 
+			 <mat-hint>Numeric</mat-hint> 
+          </mat-form-field> 
+        </div> 
+      </div> 
+ 
+    </mat-card-content> 
+    <mat-card-actions> 
+      <button mat-raised-button color="primary" type="submit">Submit</button> 
+    </mat-card-actions> 
+  </mat-card> 
+</form> 
+ 

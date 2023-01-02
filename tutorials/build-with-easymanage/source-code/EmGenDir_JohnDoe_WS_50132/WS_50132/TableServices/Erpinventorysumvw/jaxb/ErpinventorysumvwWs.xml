@@ -1,0 +1,41 @@
+<?xml version="1.0" ?>  
+    
+<ws1:ErpinventorysumvwWs xmlns:ws1="http://emws50.ErpinventorysumvwWs/jaxb/ErpinventorysumvwWs" >  
+<ErpinventorysumvwForm>  
+    <Erpinventorysumvw> 
+        <ErpinventorysumvwRecords> 
+            <ErpinventorysumvwRec> 
+                <ErpinventorysumvwFlds> 
+                <Year>1234</Year> 
+                <Month>1234</Month> 
+                <Totalqty>1234.56</Totalqty> 
+                </ErpinventorysumvwFlds> 
+                <RecInfo> 
+                    <SrlNo>1</SrlNo> 
+                    <RecNo>10010</RecNo> 
+                    <UserId>DEMO</UserId> 
+                    <DataGrp>DEMO</DataGrp> 
+                    <AppUser>DEMO</AppUser> 
+                    <Created>2006-06-01T14:10:00-05:30</Created> 
+                    <CreatedBy>DEMO</CreatedBy> 
+                    <Updated>2006-06-01T14:10:00-05:30</Updated> 
+                    <UpdatedBy>DEMO</UpdatedBy> 
+                    <Perm></Perm> 
+                </RecInfo> 
+            </ErpinventorysumvwRec> 
+        </ErpinventorysumvwRecords> 
+    </Erpinventorysumvw> 
+    <WpInfo> 
+        <WpStatus>1</WpStatus> 
+        <WpMessage></WpMessage> 
+        <WpError></WpError> 
+        <WpErrorInfo></WpErrorInfo> 
+        <WpRecords>1</WpRecords> 
+        <WpSrlNo>1</WpSrlNo> 
+        <WpRecNo>10010</WpRecNo> 
+    </WpInfo> 
+</ErpinventorysumvwForm>  
+    
+    
+</ws1:ErpinventorysumvwWs>  
+    

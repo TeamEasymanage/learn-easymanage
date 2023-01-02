@@ -1,0 +1,111 @@
+   
+Client Info For ErpsalesinquiryTblRec  
+ 
+--------------------------- 
+ErpsalesinquiryTblRec  
+--------------------------- 
+query { 
+	ErpsalesinquiryTblRecViewAll { 
+	dateofinquiry  
+	requestedqty  
+	reqquoteamt  
+	meetingpreftime  
+	created  
+	updated  
+ 
+	} 
+} 
+--------------------------- 
+query { 
+	ErpsalesinquiryTblRecViewAllPaged(page: 0, size: 10) { 
+	dateofinquiry  
+	requestedqty  
+	reqquoteamt  
+	meetingpreftime  
+	created  
+	updated  
+ 
+	} 
+} 
+--------------------------- 
+query { 
+	ErpsalesinquiryTblRecSelectWhere(searchBy: "  dateofinquiry = "" or  dateofinquiry = ""  " , sortBy: " dateofinquiry " , page: 0, size: 10) { 
+	dateofinquiry  
+	requestedqty  
+	reqquoteamt  
+	meetingpreftime  
+	created  
+	updated  
+ 
+	} 
+} 
+--------------------------- 
+query { 
+	ErpsalesinquiryTblRecQuery(dateofinquiry: "") { 
+	dateofinquiry  
+	requestedqty  
+	reqquoteamt  
+	meetingpreftime  
+	created  
+	updated  
+ 
+	} 
+} 
+--------------------------- 
+subscription { 
+	notifyErpsalesinquiryTblRecQuery(dateofinquiry: "") { 
+	dateofinquiry  
+	requestedqty  
+	reqquoteamt  
+	meetingpreftime  
+	created  
+	updated  
+ 
+	} 
+} 
+--------------------------- 
+mutation { 
+	ErpsalesinquiryTblRecCreate(ErpsalesinquiryTblRec1 : { 
+	dateofinquiry : "" , 
+	requestedqty : 10 , 
+	reqquoteamt : 10.0 , 
+	meetingpreftime : "" , 
+	created : "" , 
+	updated : "" , 
+ 
+				}) { 
+	dateofinquiry  
+	requestedqty  
+	reqquoteamt  
+	meetingpreftime  
+	created  
+	updated  
+ 
+	} 
+} 
+--------------------------- 
+mutation { 
+	ErpsalesinquiryTblRecUpdate(dateofinquiry: "" ,  ErpsalesinquiryTblRec1 : { 
+	dateofinquiry : "" , 
+	requestedqty : 10 , 
+	reqquoteamt : 10.0 , 
+	meetingpreftime : "" , 
+	created : "" , 
+	updated : "" , 
+ 
+				}) { 
+	dateofinquiry  
+	requestedqty  
+	reqquoteamt  
+	meetingpreftime  
+	created  
+	updated  
+ 
+	} 
+} 
+--------------------------- 
+mutation { 
+	ErpsalesinquiryTblRecDelete(dateofinquiry: "") 
+} 
+--------------------------- 
+ 

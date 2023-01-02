@@ -1,0 +1,71 @@
+
+/* ---------------------------------------------
+	To enable Spring Security For GraphQL - Http Basic Auth
+	Steps -
+    1] pom.xml : Uncomment dependency spring-boot-starter-security
+	2] Rename SpringSecurityConfigBasicAuth.txt (this file) to SpringSecurityConfigBasicAuth.java
+	3] Uncomment Security Auth Annotations in *GraphqlController.java, against required Mutations 
+	   e.g. @PreAuthorize("hasRole('USER') or hasRole('ADMIN')")
+	   Also Uncomment imports required e.g.
+		//import org.springframework.security.access.annotation.Secured;
+		//import org.springframework.security.access.prepost.PreAuthorize;
+	4] Clean and Re-build project
+   ---------------------------------------------
+	Note: Below annotations may have issues for using in spring graphql
+	//@Secured({ "ADMIN" })
+	//@RolesAllowed({ "USER","ADMIN" })
+   ---------------------------------------------
+*/
+
+
+package emrest.spring;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.core.userdetails.User;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.provisioning.InMemoryUserDetailsManager;
+import org.springframework.security.web.DefaultSecurityFilterChain;
+
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
+
+import static org.springframework.security.config.Customizer.withDefaults;
+
+@Configuration
+@EnableWebSecurity
+@EnableGlobalMethodSecurity(prePostEnabled = true)
+public class SpringSecurityConfigBasicAuth {
+
+	@Bean
+	DefaultSecurityFilterChain springWebFilterChain(HttpSecurity http) throws Exception {
+		return http
+				.csrf().disable()
+				.authorizeRequests().anyRequest().authenticated()
+				.and()
+				.httpBasic(withDefaults())
+				.build();
+
+	}
+
+	@Bean
+	public static InMemoryUserDetailsManager userDetailsService() {
+
+		User.UserBuilder userBuilder = User.builder();
+		UserDetails emUser = userBuilder.username("emUser").password(passwordEncoder().encode("emUser123")).roles("USER").build();
+		UserDetails emAdmin = userBuilder.username("emAdmin").password(passwordEncoder().encode("emAdmin123")).roles("USER", "ADMIN").build();
+		return new InMemoryUserDetailsManager(emUser, emAdmin);
+	}
+
+
+	@Bean
+	public static PasswordEncoder passwordEncoder() {
+		return new BCryptPasswordEncoder();
+	}
+
+
+}
+

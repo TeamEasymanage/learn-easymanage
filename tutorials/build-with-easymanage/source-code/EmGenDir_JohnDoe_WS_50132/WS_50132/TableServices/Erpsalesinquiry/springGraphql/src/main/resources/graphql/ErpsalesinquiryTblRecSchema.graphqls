@@ -1,0 +1,50 @@
+   
+# Defined in Root schema 
+# scalar EmCalendar | EmDateTime | EmDate | EmTime 
+   
+type ErpsalesinquiryTblRec { 
+ 
+	dateofinquiry: EmDate 
+	requestedqty: Int 
+	reqquoteamt: Float 
+	meetingpreftime: EmTime 
+	created: EmDateTime 
+	updated: EmDateTime 
+ 
+} 
+ 
+input ErpsalesinquiryTblRecInput { 
+ 
+	dateofinquiry: EmDate 
+	requestedqty: Int 
+	reqquoteamt: Float 
+	meetingpreftime: EmTime 
+	created: EmDateTime 
+	updated: EmDateTime 
+ 
+} 
+ 
+extend type Query { 
+	ErpsalesinquiryTblRecViewAll: [ErpsalesinquiryTblRec]! 
+	ErpsalesinquiryTblRecViewAllPaged(page: Int, size: Int)  : [ErpsalesinquiryTblRec]! 
+	ErpsalesinquiryTblRecSelectWhere(searchBy: String, sortBy: String, page: Int = 0, size: Int = 10)  : [ErpsalesinquiryTblRec]! 
+	# ErpsalesinquiryTblRecDataMesh: [ErpsalesinquiryTblRec]! 
+} 
+extend type Query { 
+	ErpsalesinquiryTblRecQuery(dateofinquiry: EmDate): [ErpsalesinquiryTblRec]! 
+} 
+ 
+extend type Subscription { 
+	notifyErpsalesinquiryTblRecQuery(dateofinquiry: EmDate): [ErpsalesinquiryTblRec]! 
+} 
+ 
+extend type Mutation { 
+	ErpsalesinquiryTblRecCreate(ErpsalesinquiryTblRec1: ErpsalesinquiryTblRecInput ): ErpsalesinquiryTblRec 
+} 
+extend type Mutation { 
+	ErpsalesinquiryTblRecUpdate(dateofinquiry: EmDate, ErpsalesinquiryTblRec1: ErpsalesinquiryTblRecInput ): ErpsalesinquiryTblRec 
+} 
+extend type Mutation { 
+	ErpsalesinquiryTblRecDelete(dateofinquiry: EmDate): Int 
+} 
+ 

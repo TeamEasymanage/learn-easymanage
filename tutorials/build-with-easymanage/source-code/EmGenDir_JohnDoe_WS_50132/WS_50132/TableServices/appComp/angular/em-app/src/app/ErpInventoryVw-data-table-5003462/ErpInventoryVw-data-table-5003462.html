@@ -1,0 +1,56 @@
+<div class="mat-elevation-z8"> 
+  <table mat-table #table class="full-width-table" matSort aria-label="Elements"> 
+		<!-- invId : Java Type long : Json Type number  : EM Type NUMBER  --> 
+    <ng-container matColumnDef="invId"> 
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>invId</th> 
+      <td mat-cell *matCellDef="let row">{{row.invId}}</td> 
+    </ng-container> 
+		<!-- productId : Java Type long : Json Type number  : EM Type NUMBER  --> 
+    <ng-container matColumnDef="productId"> 
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>productId</th> 
+      <td mat-cell *matCellDef="let row">{{row.productId}}</td> 
+    </ng-container> 
+		<!-- productName : Java Type String : Json Type string  : EM Type CHAR  --> 
+    <ng-container matColumnDef="productName"> 
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>productName</th> 
+      <td mat-cell *matCellDef="let row">{{row.productName}}</td> 
+    </ng-container> 
+		<!-- invDate : Java Type Calendar : Json Type string  : EM Type DATE  --> 
+    <ng-container matColumnDef="invDate"> 
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>invDate</th> 
+      <td mat-cell *matCellDef="let row">{{row.invDate}}</td> 
+    </ng-container> 
+		<!-- invQty : Java Type long : Json Type number  : EM Type NUMBER  --> 
+    <ng-container matColumnDef="invQty"> 
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>invQty</th> 
+      <td mat-cell *matCellDef="let row">{{row.invQty}}</td> 
+    </ng-container> 
+		<!-- invMinQty : Java Type long : Json Type number  : EM Type NUMBER  --> 
+    <ng-container matColumnDef="invMinQty"> 
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>invMinQty</th> 
+      <td mat-cell *matCellDef="let row">{{row.invMinQty}}</td> 
+    </ng-container> 
+		<!-- invCost : Java Type float : Json Type string  : EM Type FLOAT  --> 
+    <ng-container matColumnDef="invCost"> 
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>invCost</th> 
+      <td mat-cell *matCellDef="let row">{{row.invCost}}</td> 
+    </ng-container> 
+		<!-- invLocation : Java Type String : Json Type string  : EM Type CHAR  --> 
+    <ng-container matColumnDef="invLocation"> 
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>invLocation</th> 
+      <td mat-cell *matCellDef="let row">{{row.invLocation}}</td> 
+    </ng-container> 
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr> 
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr> 
+  </table> 
+ 
+  <mat-paginator #paginator 
+      [length]="dataSource.data.length" 
+      [pageIndex]="0" 
+      [pageSize]="10" 
+      [pageSizeOptions]="[5, 10, 20]" 
+      aria-label="Select page"> 
+  </mat-paginator> 
+</div> 
+  

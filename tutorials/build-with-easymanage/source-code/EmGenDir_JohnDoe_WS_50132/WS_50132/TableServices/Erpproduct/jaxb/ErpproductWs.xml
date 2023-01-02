@@ -1,0 +1,44 @@
+<?xml version="1.0" ?>  
+    
+<ws1:ErpproductWs xmlns:ws1="http://emws50.ErpproductWs/jaxb/ErpproductWs" >  
+<ErpproductForm>  
+    <Erpproduct> 
+        <ErpproductRecords> 
+            <ErpproductRec> 
+                <ErpproductFlds> 
+                <Productid>1234</Productid> 
+                <Productname>ABCD_string</Productname> 
+                <Productcategory>ABCD_string</Productcategory> 
+                <Primarysupplier>ABCD_string</Primarysupplier> 
+                <Productdesc>ABCD_string</Productdesc> 
+                <Productpicture>base64Binary_DATA</Productpicture> 
+                </ErpproductFlds> 
+                <RecInfo> 
+                    <SrlNo>1</SrlNo> 
+                    <RecNo>10010</RecNo> 
+                    <UserId>DEMO</UserId> 
+                    <DataGrp>DEMO</DataGrp> 
+                    <AppUser>DEMO</AppUser> 
+                    <Created>2006-06-01T14:10:00-05:30</Created> 
+                    <CreatedBy>DEMO</CreatedBy> 
+                    <Updated>2006-06-01T14:10:00-05:30</Updated> 
+                    <UpdatedBy>DEMO</UpdatedBy> 
+                    <Perm></Perm> 
+                </RecInfo> 
+            </ErpproductRec> 
+        </ErpproductRecords> 
+    </Erpproduct> 
+    <WpInfo> 
+        <WpStatus>1</WpStatus> 
+        <WpMessage></WpMessage> 
+        <WpError></WpError> 
+        <WpErrorInfo></WpErrorInfo> 
+        <WpRecords>1</WpRecords> 
+        <WpSrlNo>1</WpSrlNo> 
+        <WpRecNo>10010</WpRecNo> 
+    </WpInfo> 
+</ErpproductForm>  
+    
+    
+</ws1:ErpproductWs>  
+    

@@ -1,0 +1,45 @@
+<?xml version="1.0" ?>  
+    
+<ws1:ErpinventoryWs xmlns:ws1="http://emws50.ErpinventoryWs/jaxb/ErpinventoryWs" >  
+<ErpinventoryForm>  
+    <Erpinventory> 
+        <ErpinventoryRecords> 
+            <ErpinventoryRec> 
+                <ErpinventoryFlds> 
+                <Invid>1234</Invid> 
+                <Productid>1234</Productid> 
+                <Invdate>2006-06-01-05:30</Invdate> 
+                <Invqty>1234</Invqty> 
+                <Invminqty>1234</Invminqty> 
+                <Invcost>1234.56</Invcost> 
+                <Invlocation>ABCD_string</Invlocation> 
+                </ErpinventoryFlds> 
+                <RecInfo> 
+                    <SrlNo>1</SrlNo> 
+                    <RecNo>10010</RecNo> 
+                    <UserId>DEMO</UserId> 
+                    <DataGrp>DEMO</DataGrp> 
+                    <AppUser>DEMO</AppUser> 
+                    <Created>2006-06-01T14:10:00-05:30</Created> 
+                    <CreatedBy>DEMO</CreatedBy> 
+                    <Updated>2006-06-01T14:10:00-05:30</Updated> 
+                    <UpdatedBy>DEMO</UpdatedBy> 
+                    <Perm></Perm> 
+                </RecInfo> 
+            </ErpinventoryRec> 
+        </ErpinventoryRecords> 
+    </Erpinventory> 
+    <WpInfo> 
+        <WpStatus>1</WpStatus> 
+        <WpMessage></WpMessage> 
+        <WpError></WpError> 
+        <WpErrorInfo></WpErrorInfo> 
+        <WpRecords>1</WpRecords> 
+        <WpSrlNo>1</WpSrlNo> 
+        <WpRecNo>10010</WpRecNo> 
+    </WpInfo> 
+</ErpinventoryForm>  
+    
+    
+</ws1:ErpinventoryWs>  
+    

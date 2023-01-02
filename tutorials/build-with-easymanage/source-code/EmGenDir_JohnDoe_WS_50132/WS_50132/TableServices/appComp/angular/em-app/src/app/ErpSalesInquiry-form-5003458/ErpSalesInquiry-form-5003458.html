@@ -1,0 +1,102 @@
+ 
+<form [formGroup]="ErpSalesInquiryForm_5003458_CForm" novalidate (ngSubmit)="onSubmit()"> 
+  <mat-card class="shipping-card"> 
+    <mat-card-header> 
+      <mat-card-title>ErpSalesInquiry</mat-card-title> 
+    </mat-card-header> 
+    <mat-card-content> 
+      <div class="row"> 
+        <div class="col"> 
+          <mat-form-field class="full-width">  <!-- width % can change in CSS --> 
+				<!-- dateofinquiry : Java Type Calendar : Json Type string  : EM Type DATE  --> 
+            <!-- size|maxlength="10" Display Size="10" --> 
+            <!-- <input matInput placeholder="dateofinquiry" formControlName="dateofinquiry"  > --> 
+            <input matInput placeholder="dateofinquiry" formControlName="dateofinquiry" [matDatepicker]="picker1" > 
+			      <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle> 
+			      <mat-datepicker #picker1></mat-datepicker> 
+            <!-- <mat-error *ngIf="addressForm.controls['address'].hasError('required')"> 
+              Address is <strong>required</strong> 
+            </mat-error> --> 
+			 <mat-hint>Date</mat-hint> 
+          </mat-form-field> 
+        </div> 
+      </div> 
+      <div class="row"> 
+        <div class="col"> 
+          <mat-form-field class="full-width">  <!-- width % can change in CSS --> 
+				<!-- requestedqty : Java Type long : Json Type number  : EM Type NUMBER  --> 
+            <!-- size|maxlength="10" Display Size="10" --> 
+            <input matInput placeholder="requestedqty" formControlName="requestedqty"> 
+            <!-- <mat-error *ngIf="addressForm.controls['address'].hasError('required')"> 
+              Address is <strong>required</strong> 
+            </mat-error> --> 
+			 <mat-hint>Numeric</mat-hint> 
+          </mat-form-field> 
+        </div> 
+      </div> 
+      <div class="row"> 
+        <div class="col"> 
+          <mat-form-field class="full-width">  <!-- width % can change in CSS --> 
+				<!-- reqquoteamt : Java Type float : Json Type string  : EM Type FLOAT  --> 
+            <!-- size|maxlength="15" Display Size="15" --> 
+            <input matInput placeholder="reqquoteamt" formControlName="reqquoteamt"> 
+            <!-- <mat-error *ngIf="addressForm.controls['address'].hasError('required')"> 
+              Address is <strong>required</strong> 
+            </mat-error> --> 
+			 <mat-hint>Numeric</mat-hint> 
+          </mat-form-field> 
+        </div> 
+      </div> 
+      <div class="row"> 
+        <div class="col"> 
+          <mat-form-field class="full-width">  <!-- width % can change in CSS --> 
+				<!-- meetingpreftime : Java Type Calendar : Json Type string  : EM Type TIME  --> 
+            <!-- size|maxlength="8" Display Size="8" --> 
+            <input matInput placeholder="meetingpreftime" formControlName="meetingpreftime"> 
+            <!-- <mat-error *ngIf="addressForm.controls['address'].hasError('required')"> 
+              Address is <strong>required</strong> 
+            </mat-error> --> 
+			 <!-- <mat-hint>TIME</mat-hint> --> 
+          </mat-form-field> 
+        </div> 
+      </div> 
+      <div class="row"> 
+        <div class="col"> 
+          <mat-form-field class="full-width">  <!-- width % can change in CSS --> 
+				<!-- created : Java Type Calendar : Json Type string  : EM Type DATETIME  --> 
+            <!-- size|maxlength="19" Display Size="19" --> 
+            <!-- <input matInput placeholder="created" formControlName="created"  > --> 
+            <input matInput placeholder="created" formControlName="created" [matDatepicker]="picker5" > 
+			      <mat-datepicker-toggle matSuffix [for]="picker5"></mat-datepicker-toggle> 
+			      <mat-datepicker #picker5></mat-datepicker> 
+            <!-- <mat-error *ngIf="addressForm.controls['address'].hasError('required')"> 
+              Address is <strong>required</strong> 
+            </mat-error> --> 
+			 <mat-hint>Date</mat-hint> 
+          </mat-form-field> 
+        </div> 
+      </div> 
+      <div class="row"> 
+        <div class="col"> 
+          <mat-form-field class="full-width">  <!-- width % can change in CSS --> 
+				<!-- updated : Java Type Calendar : Json Type string  : EM Type DATETIME  --> 
+            <!-- size|maxlength="19" Display Size="19" --> 
+            <!-- <input matInput placeholder="updated" formControlName="updated"  > --> 
+            <input matInput placeholder="updated" formControlName="updated" [matDatepicker]="picker6" > 
+			      <mat-datepicker-toggle matSuffix [for]="picker6"></mat-datepicker-toggle> 
+			      <mat-datepicker #picker6></mat-datepicker> 
+            <!-- <mat-error *ngIf="addressForm.controls['address'].hasError('required')"> 
+              Address is <strong>required</strong> 
+            </mat-error> --> 
+			 <mat-hint>Date</mat-hint> 
+          </mat-form-field> 
+        </div> 
+      </div> 
+ 
+    </mat-card-content> 
+    <mat-card-actions> 
+      <button mat-raised-button color="primary" type="submit">Submit</button> 
+    </mat-card-actions> 
+  </mat-card> 
+</form> 
+ 

@@ -1,0 +1,44 @@
+<xsd:schema  
+    targetNamespace="http://emws50.TableServices/Erpinventoryvw/schema/" 
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+    xmlns:tcm="http://emws50.TableServices/common/jaxb/" 
+    xmlns:tbl="http://emws50.TableServices/Erpinventoryvw/schema/" > 
+    
+<xsd:import 
+    namespace="http://emws50.TableServices/common/jaxb/" 
+    schemaLocation="../../../TableServices/common/jaxb/RecInfo.xsd"/> 
+ 
+<xsd:complexType name="Erpinventoryvw"> 
+    <xsd:sequence> 
+        <xsd:element name="ErpinventoryvwRecords" type="tbl:ErpinventoryvwRecords"/> 
+        <xsd:element name="SchemaInfo" type="tcm:SchemaInfo"/> 
+    </xsd:sequence> 
+</xsd:complexType> 
+ 
+<xsd:complexType name="ErpinventoryvwRecords"> 
+    <xsd:sequence> 
+        <xsd:element name="ErpinventoryvwRec" minOccurs="0" maxOccurs="unbounded"> 
+            <xsd:complexType> 
+                <xsd:sequence> 
+                    <xsd:element name="ErpinventoryvwFlds" type="tbl:ErpinventoryvwFlds"/> 
+                    <xsd:element name="RecInfo" type="tcm:RecInfo"/> 
+                </xsd:sequence> 
+            </xsd:complexType> 
+        </xsd:element> 
+    </xsd:sequence> 
+</xsd:complexType> 
+ 
+<xsd:complexType name="ErpinventoryvwFlds"> 
+    <xsd:sequence> 
+        <xsd:element name="invid" type="xsd:integer"/> 
+        <xsd:element name="productid" type="xsd:integer"/> 
+        <xsd:element name="productname" type="xsd:string"/> 
+        <xsd:element name="invdate" type="xsd:date"/> 
+        <xsd:element name="invqty" type="xsd:integer"/> 
+        <xsd:element name="invminqty" type="xsd:integer"/> 
+        <xsd:element name="invcost" type="xsd:float"/> 
+        <xsd:element name="invlocation" type="xsd:string"/> 
+    </xsd:sequence> 
+</xsd:complexType> 
+    
+</xsd:schema> 

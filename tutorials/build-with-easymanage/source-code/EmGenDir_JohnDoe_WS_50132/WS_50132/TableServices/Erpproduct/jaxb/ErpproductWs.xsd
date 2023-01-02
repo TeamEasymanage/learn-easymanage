@@ -1,0 +1,62 @@
+<xsd:schema  
+    targetNamespace="http://emws50.ErpproductWs/jaxb/ErpproductWs" 
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+    xmlns:jaxb="http://java.sun.com/xml/ns/jaxb" 
+    jaxb:version="2.0" 
+    xmlns:ws1="http://emws50.ErpproductWs/jaxb/ErpproductWs" 
+    xmlns:tbl1="http://emws50.TableServices/Erpproduct/schema/" 
+    xmlns:wp="http://emws50.WPServices/common/jaxb/" > 
+    
+    <xsd:annotation> 
+        <xsd:appinfo> 
+    
+            <jaxb:globalBindings> 
+    
+                <jaxb:javaType name="java.util.Calendar" xmlType="xsd:dateTime"  
+                    parseMethod="javax.xml.bind.DatatypeConverter.parseDateTime"  
+                    printMethod="javax.xml.bind.DatatypeConverter.printDateTime"/> 
+    
+                <jaxb:javaType name="java.util.Calendar" xmlType="xsd:date" 
+                    parseMethod="javax.xml.bind.DatatypeConverter.parseDate" 
+                    printMethod="javax.xml.bind.DatatypeConverter.printDate"/> 
+    
+                <jaxb:javaType name="java.util.Calendar" xmlType="xsd:time" 
+                    parseMethod="javax.xml.bind.DatatypeConverter.parseTime" 
+                    printMethod="javax.xml.bind.DatatypeConverter.printTime"/> 
+    
+            </jaxb:globalBindings> 
+		 <jaxb:schemaBindings> 
+			<jaxb:package name="ErpproductWs.jaxb" /> 
+		 </jaxb:schemaBindings> 
+        </xsd:appinfo> 
+    </xsd:annotation> 
+    
+  
+<xsd:import 
+    namespace="http://emws50.TableServices/Erpproduct/schema/"  
+    schemaLocation="../../../TableServices/Erpproduct/schema/Erpproduct.xsd"/>  
+  
+ 
+<xsd:import  
+    namespace="http://emws50.WPServices/common/jaxb/"  
+    schemaLocation="../../../WPServices/common/jaxb/common.xsd"/> 
+ 
+<xsd:element name="ErpproductWs" type="ws1:ErpproductWs"/> 
+ 
+<xsd:complexType name="ErpproductWs"> 
+    <xsd:sequence> 
+        <xsd:element name="ErpproductForm" type="ws1:ErpproductForm"/> 
+    </xsd:sequence> 
+</xsd:complexType> 
+ 
+  
+<xsd:complexType name="ErpproductForm">  
+    <xsd:sequence> 
+        <xsd:element name="Erpproduct" type="tbl1:Erpproduct"/> 
+        <xsd:element name="WpInfo" type="wp:WpInfo"/> 
+    </xsd:sequence> 
+</xsd:complexType> 
+  
+ 
+    
+</xsd:schema> 

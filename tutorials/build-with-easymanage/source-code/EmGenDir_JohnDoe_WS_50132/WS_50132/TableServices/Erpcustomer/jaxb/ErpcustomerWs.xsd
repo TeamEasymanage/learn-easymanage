@@ -1,0 +1,62 @@
+<xsd:schema  
+    targetNamespace="http://emws50.ErpcustomerWs/jaxb/ErpcustomerWs" 
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+    xmlns:jaxb="http://java.sun.com/xml/ns/jaxb" 
+    jaxb:version="2.0" 
+    xmlns:ws1="http://emws50.ErpcustomerWs/jaxb/ErpcustomerWs" 
+    xmlns:tbl1="http://emws50.TableServices/Erpcustomer/schema/" 
+    xmlns:wp="http://emws50.WPServices/common/jaxb/" > 
+    
+    <xsd:annotation> 
+        <xsd:appinfo> 
+    
+            <jaxb:globalBindings> 
+    
+                <jaxb:javaType name="java.util.Calendar" xmlType="xsd:dateTime"  
+                    parseMethod="javax.xml.bind.DatatypeConverter.parseDateTime"  
+                    printMethod="javax.xml.bind.DatatypeConverter.printDateTime"/> 
+    
+                <jaxb:javaType name="java.util.Calendar" xmlType="xsd:date" 
+                    parseMethod="javax.xml.bind.DatatypeConverter.parseDate" 
+                    printMethod="javax.xml.bind.DatatypeConverter.printDate"/> 
+    
+                <jaxb:javaType name="java.util.Calendar" xmlType="xsd:time" 
+                    parseMethod="javax.xml.bind.DatatypeConverter.parseTime" 
+                    printMethod="javax.xml.bind.DatatypeConverter.printTime"/> 
+    
+            </jaxb:globalBindings> 
+		 <jaxb:schemaBindings> 
+			<jaxb:package name="ErpcustomerWs.jaxb" /> 
+		 </jaxb:schemaBindings> 
+        </xsd:appinfo> 
+    </xsd:annotation> 
+    
+  
+<xsd:import 
+    namespace="http://emws50.TableServices/Erpcustomer/schema/"  
+    schemaLocation="../../../TableServices/Erpcustomer/schema/Erpcustomer.xsd"/>  
+  
+ 
+<xsd:import  
+    namespace="http://emws50.WPServices/common/jaxb/"  
+    schemaLocation="../../../WPServices/common/jaxb/common.xsd"/> 
+ 
+<xsd:element name="ErpcustomerWs" type="ws1:ErpcustomerWs"/> 
+ 
+<xsd:complexType name="ErpcustomerWs"> 
+    <xsd:sequence> 
+        <xsd:element name="ErpcustomerForm" type="ws1:ErpcustomerForm"/> 
+    </xsd:sequence> 
+</xsd:complexType> 
+ 
+  
+<xsd:complexType name="ErpcustomerForm">  
+    <xsd:sequence> 
+        <xsd:element name="Erpcustomer" type="tbl1:Erpcustomer"/> 
+        <xsd:element name="WpInfo" type="wp:WpInfo"/> 
+    </xsd:sequence> 
+</xsd:complexType> 
+  
+ 
+    
+</xsd:schema> 
