@@ -20,9 +20,13 @@ Please find below, information on what you will learn from Tutorials for develop
 - REST APIs
 
 
-### Learn EasyManage Deep Dive
+### Learn EasyManage
 
 Check out Videos from our channel under this playlist on YouTube. Please follow the tutorial for *Build With EasyManage*.
+
+- Flutter App Features
+- GraphQL APIs Features
+
 
 ----------------------------------------------------------------
 Below Videos and Tutorials are Coming Soon!
