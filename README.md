@@ -6,7 +6,7 @@ Tutorials and sample projects for full-stack, frontend and backend developers. T
 
 Please find below, information on what you will learn from Tutorials for developers. There are different tutorial series:
 
-### Build With EasyManage
+### A] Build With EasyManage
 
 - Create a Full-stack App: Flutter App with GraphQL against MySQL
   - Simple App for customer, product, inventory data
@@ -20,7 +20,7 @@ Please find below, information on what you will learn from Tutorials for develop
 - REST APIs
 
 
-### Learn EasyManage
+### B] Learn EasyManage
 
 Check out Videos from our channel under this playlist on YouTube. Please follow the tutorial for *Build With EasyManage*.
 
@@ -28,13 +28,9 @@ Check out Videos from our channel under this playlist on YouTube. Please follow 
 - GraphQL APIs Features
 
 
-----------------------------------------------------------------
-Below Videos and Tutorials are Coming Soon!
-----------------------------------------------------------------
+### C] Low-Code Customize & Extend
 
-### Low-Code Customize & Extend
-
-### Full-Stack
+### 1) Full-Stack
 
 #### Flutter and GraphQL Low-Code Customize For Beginners
 
@@ -43,7 +39,7 @@ Below Videos and Tutorials are Coming Soon!
     - Handling Views in Display
     - Handling Views in Input/Edit Saving
 
-### Frontend
+### 2) Frontend
 
 #### Flutter Low-Code Customize For Beginners
 
@@ -75,7 +71,7 @@ Below Videos and Tutorials are Coming Soon!
   - How to implment shopping cart
 -->
 
-### Backend
+### 3) Backend
 
 #### GraphQL Low-Code Customize For Beginners
 
