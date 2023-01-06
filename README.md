@@ -38,37 +38,37 @@ Below Videos and Tutorials are Coming Soon!
 
 #### Flutter and GraphQL Low-Code Customize For Beginners
 
-  - Use database generated key values upon insert
-  - Use Views based on 2 tables intro
-  - Handling Views based on 2 tables in Display
-  - Handling Views based on 2 tables in Input/Edit Saving
+  - Use database generated key values upon insert/create record
+  - Use Views based on 2 tables
+    - Handling Views in Display
+    - Handling Views in Input/Edit Saving
 
 ### Frontend
 
 #### Flutter Low-Code Customize For Beginners
 
   - Hide Fields and Columns
-  - Add Dropdown (e.g. foreign key - value)
+  - Add Fields Validations in Form
   - Link Master - Detail Table Screens
-  - Refine SideNav (Navbar)
+  - Misc-01: Refine Navigation, Set Flow, Trim Unused parts, Switch GraphQL|REST
+  - Misc-02: SelectableText, Images, Launch URLs
   - Enable Media Players, Uploading
-  - Enable Launch URLs
-  - Build real data Graph from template code
-  - Use GraphQL Subscriptions
+  - Add Dropdown (e.g. foreign key - value)
+  - Build real data Graph from graph template code
   - Add/Modify/Remove Table Columns, Regenerate code, Sync
-  - Add/Remove Screens and Widgets
-  - Understand and switch between APIs calling to GraphQL or REST
+  - Add/Remove New Screens and Widgets, Regenerate code, Sync
 
 #### Flutter Low-Code Customize For Advanced
 
   - Using Hive to store data locally
   - Global Variables to manage State
   - Enable Periodic Notifications with data from API fetch
+  - Use GraphQL Subscriptions
   - Realtime Feed With Notifications
   - Add your own non-EasyManage APIs
   - Setting up Security Authentication Sign-Up Sign-In
   - Setup Splash Screen
-  - Setting up API calling for production
+  - Set APIs settings for production
 
 <!--
 #### Flutter Customize Example Use Case
@@ -80,7 +80,7 @@ Below Videos and Tutorials are Coming Soon!
 #### GraphQL Low-Code Customize For Beginners
 
   - Implement Security - Authentication, Authorization
-  - Implement custom FindByColumn
+  - Customize SelectWhere For specific FindByColumn
   - Implement Foreign-Key or any other Relationship
   - Implement Nested Schemas
 
