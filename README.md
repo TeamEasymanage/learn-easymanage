@@ -41,7 +41,6 @@ Check out Videos from our channel under this playlist on YouTube. Please follow 
   - Add/Modify/Remove Table Columns
     - Regenerate code, Sync
   - Add/Remove New Screens and Widgets
-  
   - Setting up Security - Authentication, Authorization, Sign-Up Sign-In, BE/FE
   - Set APIs settings for production in BE/FE
 
