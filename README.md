@@ -38,8 +38,13 @@ Check out Videos from our channel under this playlist on YouTube. Please follow 
   - Use Views based on 2 tables
     - Handling Views in Display
     - Handling Views in Input/Edit Saving
+  - Add/Modify/Remove Table Columns
+    - Regenerate code, Sync
+  - Add/Remove New Screens and Widgets
+  - Setting up Security - Authentication, Authorization, Sign-Up Sign-In, BE/FE
+  - Set APIs settings for production in BE/FE
 
-### 2) Frontend
+### 2) Frontend (FE)
 
 #### Flutter Low-Code Customize For Beginners
 
@@ -51,8 +56,6 @@ Check out Videos from our channel under this playlist on YouTube. Please follow 
   - Enable Media Players, Uploading
   - Add Dropdown (e.g. foreign key - value)
   - Build real data Graph from graph template code
-  - Add/Modify/Remove Table Columns, Regenerate code, Sync
-  - Add/Remove New Screens and Widgets, Regenerate code, Sync
 
 #### Flutter Low-Code Customize For Advanced
 
@@ -62,20 +65,17 @@ Check out Videos from our channel under this playlist on YouTube. Please follow 
   - Use GraphQL Subscriptions
   - Realtime Feed With Notifications
   - Add your own non-EasyManage APIs
-  - Setting up Security Authentication Sign-Up Sign-In
   - Setup Splash Screen
-  - Set APIs settings for production
 
 <!--
 #### Flutter Customize Example Use Case
   - How to implment shopping cart
 -->
 
-### 3) Backend
+### 3) Backend (BE)
 
 #### GraphQL Low-Code Customize For Beginners
 
-  - Implement Security - Authentication, Authorization
   - Customize SelectWhere For specific FindByColumn
   - Implement Foreign-Key or any other Relationship
   - Implement Nested Schemas
