@@ -34,13 +34,18 @@ Check out Videos from our channel under this playlist on YouTube. Please follow 
 
 #### Flutter and GraphQL Low-Code Customize
 
+**Part 1**
   - Use database generated key values upon insert/create record
   - Use Views based on 2 tables
     - Handling Views in Display
     - Handling Views in Input/Edit Saving
+
+**Part 2**
   - Add/Modify/Remove Table Columns
     - Regenerate code, Sync
   - Add/Remove New Screens and Widgets
+
+**Part 3**
   - Setting up Security - Authentication, Authorization, Sign-Up Sign-In, BE/FE
   - Set APIs settings for production in BE/FE
 
