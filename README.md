@@ -32,7 +32,7 @@ Check out Videos from our channel under this playlist on YouTube. Please follow 
 
 ### 1) Full-Stack
 
-#### Flutter and GraphQL Low-Code Customize For Beginners
+#### Flutter and GraphQL Low-Code Customize
 
   - Use database generated key values upon insert/create record
   - Use Views based on 2 tables
@@ -41,6 +41,7 @@ Check out Videos from our channel under this playlist on YouTube. Please follow 
   - Add/Modify/Remove Table Columns
     - Regenerate code, Sync
   - Add/Remove New Screens and Widgets
+  
   - Setting up Security - Authentication, Authorization, Sign-Up Sign-In, BE/FE
   - Set APIs settings for production in BE/FE
 
