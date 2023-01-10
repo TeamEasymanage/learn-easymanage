@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd"> 
+	<modelVersion>4.0.0</modelVersion> 
+	<parent> 
+		<groupId>org.springframework.boot</groupId> 
+		<artifactId>spring-boot-starter-parent</artifactId> 
+		<version>2.7.3</version> 
+		<relativePath/> <!-- lookup parent from repository --> 
+	</parent> 
+	<groupId>emws.spring</groupId>  
+	<artifactId>EmDbGraphQLApp50132</artifactId>  
+    <version>1.0-SNAPSHOT</version>  
+	<packaging>jar</packaging>  
+	<name>EmDbGraphQLApp50132 App</name>  
+	<description>EmDbGraphQLApp50132 GraphQL API App</description>  
+	<properties>  
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>  
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>  
+		<java.version>1.8</java.version>  
+	</properties>  
+ 
+	<dependencies>  
+ 
+		<dependency>  
+			<groupId>mysql</groupId>  
+			<artifactId>mysql-connector-java</artifactId>  
+			 <version>8.0.31</version>  
+			<!-- <version>5.1.49</version> --> 
+			<scope>runtime</scope>  
+		</dependency>  
+ 
+		<!--  
+		<dependency>  
+			<groupId>com.oracle.database.jdbc</groupId>  
+			<artifactId>ojdbc8</artifactId>  
+			<scope>runtime</scope>  
+		</dependency>  
+ 
+		<dependency>  
+			<groupId>org.postgresql</groupId>  
+			<artifactId>postgresql</artifactId>  
+			<version>42.5.1</version>  
+			<scope>runtime</scope>  
+		</dependency>  
+ 
+		<dependency>  
+			<groupId>com.microsoft.sqlserver</groupId>  
+			<artifactId>mssql-jdbc</artifactId>  
+			<version>10.2.1.jre8</version>  
+			<scope>runtime</scope>  
+		</dependency>  
+		-->  
+ 
+		<dependency>  
+			<groupId>org.springframework.boot</groupId>  
+			<artifactId>spring-boot-starter-data-rest</artifactId>  
+		</dependency>  
+		<dependency> 
+			<groupId>org.springframework.boot</groupId>  
+			<artifactId>spring-boot-starter-web</artifactId>  
+		</dependency> 
+ 
+		<!-- Data Rest JPA --> 
+		<dependency>  
+			<groupId>org.springframework.boot</groupId>  
+			<artifactId>spring-boot-starter-data-jpa</artifactId>  
+		</dependency>  
+ 
+		<!-- spring webClient -->  
+		<dependency>  
+			<groupId>org.springframework.boot</groupId>  
+			<artifactId>spring-boot-starter-webflux</artifactId>  
+		</dependency> 
+ 
+	  <!-- spring graphql --> 
+	  <dependency> 
+		  <groupId>org.springframework.boot</groupId> 
+		  <artifactId>spring-boot-starter-graphql</artifactId> 
+	  </dependency> 
+ 
+	  <dependency> 
+		  <groupId>com.graphql-java</groupId> 
+		  <artifactId>graphql-java-extended-scalars</artifactId> 
+		  <version>18.1</version> 
+	  </dependency> 
+ 
+	  <dependency> 
+		  <groupId>org.springframework.graphql</groupId> 
+		  <artifactId>spring-graphql-test</artifactId> 
+		  <scope>test</scope> 
+	  </dependency> 
+ 
+		<!-- for graphql Subscription : Comment out to disable Subscriptions --> 
+		<dependency> 
+			<groupId>org.springframework.boot</groupId> 
+			<artifactId>spring-boot-starter-websocket</artifactId> 
+		</dependency> 
+ 
+	  <!-- Querydsl --> 
+	  <dependency> 
+	  	<groupId>com.querydsl</groupId> 
+	  	<artifactId>querydsl-jpa</artifactId> 
+	  	<version>${querydsl.version}</version> 
+	  </dependency> 
+	  <dependency> 
+	  	<groupId>com.querydsl</groupId> 
+	  	<artifactId>querydsl-apt</artifactId> 
+	  	<version>${querydsl.version}</version> 
+	  	<scope>provided</scope> 
+	  	<classifier>jpa</classifier> 
+	  </dependency> 
+ 
+	  <!-- spring security --> 
+	  <!-- 
+	  <dependency> 
+		  <groupId>org.springframework.boot</groupId>  
+		  <artifactId>spring-boot-starter-security</artifactId>  
+	  </dependency> 
+	  --> 
+ 
+		<dependency>  
+			<groupId>org.springframework.boot</groupId>  
+			<artifactId>spring-boot-starter-test</artifactId>  
+			<scope>test</scope>  
+		</dependency>  
+	</dependencies>  
+ 
+	<build>  
+ 
+		<sourceDirectory>src</sourceDirectory>  
+ 
+    	<finalName>${project.artifactId}</finalName>  
+ 
+        <plugins> 
+			<plugin> 
+				<groupId>org.springframework.boot</groupId> 
+				<artifactId>spring-boot-maven-plugin</artifactId> 
+			</plugin> 
+			<!-- copy resources --> 
+			<plugin>  
+				<artifactId>maven-resources-plugin</artifactId>  
+				<version>3.0.1</version>  
+				<executions>  
+					<execution>   
+						<id>copy-sources-add</id>   
+						<phase>generate-sources</phase>  
+						<goals>  
+							<goal>copy-resources</goal>   
+						</goals>  
+						<configuration>   
+							<outputDirectory>src/addons</outputDirectory>   
+							<resources>   
+								<!-- For EM DbGraphQL Incl. All project -->  
+								<resource>    
+									<directory>../../</directory>    
+										<includes>    
+											<include>**/springGraphql/src/*.java</include>    
+											<include>**/spring/src/*.java</include>    
+										</includes>    
+										<excludes>    
+											<exclude>**/EmDbGraphQLApp*/**</exclude>    
+											<exclude>**/EmDbRestApp*/**</exclude>    
+											<exclude>**/*RestSpringApp.java</exclude>    
+											<exclude>**/*DataRestController.java</exclude>    
+											<exclude>**/EmQueryParam.java</exclude>    
+											<exclude>**/*WsRestController.java</exclude>    
+											<exclude>**/EmParam.java</exclude>   
+											<exclude>**/EmCalendarUtil.java</exclude>   
+											<exclude>**/EmPredicatesBuilder.java</exclude>   
+											<exclude>**/EmPredicatesHelper.java</exclude>   
+											<exclude>**/EmSearchCriteria.java</exclude>   
+											<exclude>**/EmSortBuilder.java</exclude>   
+										</excludes>    
+								</resource>    
+							</resources>   
+						</configuration>   
+					</execution>   
+					<execution>   
+						<id>copy-qrydsl-add</id>   
+						<phase>generate-sources</phase>  
+						<goals>  
+							<goal>copy-resources</goal>   
+						</goals>  
+						<configuration>   
+							<outputDirectory>src</outputDirectory>   
+							<resources>   
+								<!-- Qrydsl files from EmDbRestApp* -->  
+								<resource>    
+									<directory>../../EmDbRestApp50132/spring/src</directory>    
+										<includes>    
+											<include>EmParam.java</include>  
+											<include>EmCalendarUtil.java</include>  
+											<include>EmPredicatesBuilder.java</include>  
+											<include>EmPredicatesHelper.java</include>  
+											<include>EmSearchCriteria.java</include>  
+											<include>EmSortBuilder.java</include>  
+										</includes>    
+								</resource>    
+							</resources>   
+						</configuration>   
+					</execution>   
+					<execution>   
+						<id>copy-graphql-add</id>    
+						<phase>generate-sources</phase>   
+						<goals>   
+							<goal>copy-resources</goal>    
+						</goals>   
+						<configuration>    
+							<outputDirectory>src/main/resources/graphql/addons</outputDirectory>    
+							<resources>    
+								<!-- For EM DbGraphQL Incl. All project -->   
+								<resource>     
+									<directory>../../</directory>     
+										<includes>     
+											<include>**/springGraphql/src/main/resources/graphql/*.graphqls</include>     
+										</includes>     
+										<excludes>    
+											<exclude>**/EmDbGraphQLApp*/**</exclude>    
+											<exclude>**/EmDbRestApp*/**</exclude>    
+										</excludes>    
+								</resource>     
+							</resources>    
+						</configuration>    
+					</execution>    
+				</executions>  
+			</plugin>  
+			<plugin> 
+				<groupId>com.google.code.maven-replacer-plugin</groupId> 
+				<artifactId>replacer</artifactId> 
+				<version>1.5.3</version> 
+				<executions> 
+					<execution> 
+						<phase>generate-sources</phase> 
+						<goals> 
+							<goal>replace</goal> 
+						</goals> 
+					</execution> 
+				</executions> 
+				<configuration> 
+					<basedir>${project.basedir}/src</basedir> 
+					<includes> 
+						<include>**/*Repository.java</include> 
+					</includes> 
+					<replacements> 
+						<replacement> 
+							<token>\/\*QD</token> 
+							<value></value> 
+						</replacement> 
+						<replacement> 
+							<token>QD\*\/</token> 
+							<value></value> 
+						</replacement> 
+					</replacements> 
+				</configuration> 
+			</plugin> 
+		</plugins>  
+	</build>  
+</project>  
+ 

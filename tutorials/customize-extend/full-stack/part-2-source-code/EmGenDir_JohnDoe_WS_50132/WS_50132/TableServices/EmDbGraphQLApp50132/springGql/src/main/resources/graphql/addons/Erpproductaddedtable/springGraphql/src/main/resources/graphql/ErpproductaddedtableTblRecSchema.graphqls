@@ -1,0 +1,52 @@
+   
+# Defined in Root schema 
+# scalar EmCalendar | EmDateTime | EmDate | EmTime 
+   
+type ErpproductaddedtableTblRec { 
+ 
+	productId: Int 
+	productName: String 
+	productCategory: String 
+	primarySupplier: String 
+	productDesc: String 
+	productPicture: String 
+	productAddedColumn: String 
+ 
+} 
+ 
+input ErpproductaddedtableTblRecInput { 
+ 
+	productId: Int 
+	productName: String 
+	productCategory: String 
+	primarySupplier: String 
+	productDesc: String 
+	productPicture: String 
+	productAddedColumn: String 
+ 
+} 
+ 
+extend type Query { 
+	ErpproductaddedtableTblRecViewAll: [ErpproductaddedtableTblRec]! 
+	ErpproductaddedtableTblRecViewAllPaged(page: Int, size: Int)  : [ErpproductaddedtableTblRec]! 
+	ErpproductaddedtableTblRecSelectWhere(searchBy: String, sortBy: String, page: Int = 0, size: Int = 10)  : [ErpproductaddedtableTblRec]! 
+	# ErpproductaddedtableTblRecDataMesh: [ErpproductaddedtableTblRec]! 
+} 
+extend type Query { 
+	ErpproductaddedtableTblRecQuery(productId: Int): [ErpproductaddedtableTblRec]! 
+} 
+ 
+extend type Subscription { 
+	notifyErpproductaddedtableTblRecQuery(productId: Int): [ErpproductaddedtableTblRec]! 
+} 
+ 
+extend type Mutation { 
+	ErpproductaddedtableTblRecCreate(ErpproductaddedtableTblRec1: ErpproductaddedtableTblRecInput ): ErpproductaddedtableTblRec 
+} 
+extend type Mutation { 
+	ErpproductaddedtableTblRecUpdate(productId: Int, ErpproductaddedtableTblRec1: ErpproductaddedtableTblRecInput ): ErpproductaddedtableTblRec 
+} 
+extend type Mutation { 
+	ErpproductaddedtableTblRecDelete(productId: Int): Int 
+} 
+ 

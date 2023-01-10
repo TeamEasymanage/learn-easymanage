@@ -1,0 +1,44 @@
+   
+# Defined in Root schema 
+# scalar EmCalendar | EmDateTime | EmDate | EmTime 
+   
+type ErpinventorysumvwTblRec { 
+ 
+	year: Int 
+	month: Int 
+	totalQty: Float 
+ 
+} 
+ 
+input ErpinventorysumvwTblRecInput { 
+ 
+	year: Int 
+	month: Int 
+	totalQty: Float 
+ 
+} 
+ 
+extend type Query { 
+	ErpinventorysumvwTblRecViewAll: [ErpinventorysumvwTblRec]! 
+	ErpinventorysumvwTblRecViewAllPaged(page: Int, size: Int)  : [ErpinventorysumvwTblRec]! 
+	ErpinventorysumvwTblRecSelectWhere(searchBy: String, sortBy: String, page: Int = 0, size: Int = 10)  : [ErpinventorysumvwTblRec]! 
+	# ErpinventorysumvwTblRecDataMesh: [ErpinventorysumvwTblRec]! 
+} 
+extend type Query { 
+	ErpinventorysumvwTblRecQuery(year: Int): [ErpinventorysumvwTblRec]! 
+} 
+ 
+extend type Subscription { 
+	notifyErpinventorysumvwTblRecQuery(year: Int): [ErpinventorysumvwTblRec]! 
+} 
+ 
+extend type Mutation { 
+	ErpinventorysumvwTblRecCreate(ErpinventorysumvwTblRec1: ErpinventorysumvwTblRecInput ): ErpinventorysumvwTblRec 
+} 
+extend type Mutation { 
+	ErpinventorysumvwTblRecUpdate(year: Int, ErpinventorysumvwTblRec1: ErpinventorysumvwTblRecInput ): ErpinventorysumvwTblRec 
+} 
+extend type Mutation { 
+	ErpinventorysumvwTblRecDelete(year: Int): Int 
+} 
+ 

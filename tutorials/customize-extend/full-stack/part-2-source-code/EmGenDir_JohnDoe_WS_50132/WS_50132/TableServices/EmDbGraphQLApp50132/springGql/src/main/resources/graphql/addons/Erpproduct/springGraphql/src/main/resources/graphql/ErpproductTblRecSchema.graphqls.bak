@@ -1,0 +1,50 @@
+   
+# Defined in Root schema 
+# scalar EmCalendar | EmDateTime | EmDate | EmTime 
+   
+type ErpproductTblRec { 
+ 
+	productId: Int 
+	productName: String 
+	productCategory: String 
+	primarySupplier: String 
+	productDesc: String 
+	productPicture: String 
+ 
+} 
+ 
+input ErpproductTblRecInput { 
+ 
+	productId: Int 
+	productName: String 
+	productCategory: String 
+	primarySupplier: String 
+	productDesc: String 
+	productPicture: String 
+ 
+} 
+ 
+extend type Query { 
+	ErpproductTblRecViewAll: [ErpproductTblRec]! 
+	ErpproductTblRecViewAllPaged(page: Int, size: Int)  : [ErpproductTblRec]! 
+	ErpproductTblRecSelectWhere(searchBy: String, sortBy: String, page: Int = 0, size: Int = 10)  : [ErpproductTblRec]! 
+	# ErpproductTblRecDataMesh: [ErpproductTblRec]! 
+} 
+extend type Query { 
+	ErpproductTblRecQuery(productId: Int): [ErpproductTblRec]! 
+} 
+ 
+extend type Subscription { 
+	notifyErpproductTblRecQuery(productId: Int): [ErpproductTblRec]! 
+} 
+ 
+extend type Mutation { 
+	ErpproductTblRecCreate(ErpproductTblRec1: ErpproductTblRecInput ): ErpproductTblRec 
+} 
+extend type Mutation { 
+	ErpproductTblRecUpdate(productId: Int, ErpproductTblRec1: ErpproductTblRecInput ): ErpproductTblRec 
+} 
+extend type Mutation { 
+	ErpproductTblRecDelete(productId: Int): Int 
+} 
+ 

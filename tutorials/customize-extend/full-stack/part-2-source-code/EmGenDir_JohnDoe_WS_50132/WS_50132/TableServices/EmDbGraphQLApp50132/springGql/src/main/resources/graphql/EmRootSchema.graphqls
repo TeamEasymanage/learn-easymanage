@@ -1,0 +1,19 @@
+
+# Define scalar for global use
+scalar EmCalendar
+scalar EmDateTime
+scalar EmDate
+scalar EmTime
+
+# Root Level definitions (empty), then we use "extend" at table-level schema, to manage multiple schema files
+type Query {
+    _empty: String
+}
+
+type Mutation {
+    _empty: String
+}
+
+type Subscription {
+    _empty: String
+}

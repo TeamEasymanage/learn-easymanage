@@ -1,0 +1,52 @@
+   
+# Defined in Root schema 
+# scalar EmCalendar | EmDateTime | EmDate | EmTime 
+   
+type ErpinventoryTblRec { 
+ 
+	invId: Int 
+	productId: Int 
+	invDate: EmDate 
+	invQty: Int 
+	invMinQty: Int 
+	invCost: Float 
+	invLocation: String 
+ 
+} 
+ 
+input ErpinventoryTblRecInput { 
+ 
+	invId: Int 
+	productId: Int 
+	invDate: EmDate 
+	invQty: Int 
+	invMinQty: Int 
+	invCost: Float 
+	invLocation: String 
+ 
+} 
+ 
+extend type Query { 
+	ErpinventoryTblRecViewAll: [ErpinventoryTblRec]! 
+	ErpinventoryTblRecViewAllPaged(page: Int, size: Int)  : [ErpinventoryTblRec]! 
+	ErpinventoryTblRecSelectWhere(searchBy: String, sortBy: String, page: Int = 0, size: Int = 10)  : [ErpinventoryTblRec]! 
+	# ErpinventoryTblRecDataMesh: [ErpinventoryTblRec]! 
+} 
+extend type Query { 
+	ErpinventoryTblRecQuery(invId: Int): [ErpinventoryTblRec]! 
+} 
+ 
+extend type Subscription { 
+	notifyErpinventoryTblRecQuery(invId: Int): [ErpinventoryTblRec]! 
+} 
+ 
+extend type Mutation { 
+	ErpinventoryTblRecCreate(ErpinventoryTblRec1: ErpinventoryTblRecInput ): ErpinventoryTblRec 
+} 
+extend type Mutation { 
+	ErpinventoryTblRecUpdate(invId: Int, ErpinventoryTblRec1: ErpinventoryTblRecInput ): ErpinventoryTblRec 
+} 
+extend type Mutation { 
+	ErpinventoryTblRecDelete(invId: Int): Int 
+} 
+ 
