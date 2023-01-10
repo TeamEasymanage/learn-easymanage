@@ -8,6 +8,8 @@ Please find below, information on what you will learn from Tutorials for develop
 
 ### A] Build With EasyManage
 
+Folder: [/tutorials/build-with-easymanage](https://github.com/TeamEasymanage/learn-easymanage/tree/main/tutorials/build-with-easymanage)
+
 - Create a Full-stack App: Flutter App with GraphQL against MySQL
   - Simple App for customer, product, inventory data
 
@@ -30,6 +32,8 @@ Check out Videos from our channel under this playlist on YouTube. Please follow 
 
 ### C] Low-Code Customize & Extend
 
+Folder: [/tutorials/customize-extend](https://github.com/TeamEasymanage/learn-easymanage/tree/main/tutorials/customize-extend)
+
 ### 1) Full-Stack
 
 #### Flutter and GraphQL Low-Code Customize
@@ -40,10 +44,14 @@ Check out Videos from our channel under this playlist on YouTube. Please follow 
     - Handling Views in Display
     - Handling Views in Input/Edit Saving
 
+Folder: [Part 1](https://github.com/TeamEasymanage/learn-easymanage/tree/main/tutorials/customize-extend/full-stack/part-1-source-code)
+
 **Part 2**
   - Add/Modify/Remove Table Columns
     - Regenerate code, Sync
   - Add/Remove New Screens and Widgets
+
+Folder: [Part 2](https://github.com/TeamEasymanage/learn-easymanage/tree/main/tutorials/customize-extend/full-stack/part-2-source-code)
 
 **Part 3**
   - Setting up Security - Authentication, Authorization, Sign-Up Sign-In, BE/FE
